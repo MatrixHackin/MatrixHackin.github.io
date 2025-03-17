@@ -35,10 +35,20 @@
     <title>Introduction to ME</title>
     <url>/2024/10/11/Introduction-to-ME/</url>
     <content><![CDATA[<ul>
-<li>scale of itegration  </li>
+<li>scale of itegration<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7f9a1b973f.png"
+                      alt="Pasted_image_20240115224127.png"
+                ><figcaption>Pasted_image_20240115224127.png</figcaption></figure></li>
 <li>Moore’s Law<br>  the number of transistors in a dense IC doubles about every two years</li>
 <li>process size<br>  the size in nm is the gate length of the transistor<ul>
-<li>gate length measure transistor speed and density  </li>
+<li>gate length measure transistor speed and density<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7f9cf65d7a.png"
+                      alt="Pasted_image_20240115225320.png"
+                ><figcaption>Pasted_image_20240115225320.png</figcaption></figure></li>
 </ul>
 </li>
 <li>types of signals<ul>
@@ -50,14 +60,29 @@
 <li>analog &amp; digital<ul>
 <li>analog: continuous in value, not necessary in time</li>
 <li>digital: discrete in value, but can be continuous in time</li>
-<li>A&#x2F;D  </li>
+<li>A&#x2F;D<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7f9f839bfc.png"
+                      alt="Pasted_image_20240115233138.png"
+                ><figcaption>Pasted_image_20240115233138.png</figcaption></figure></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>signal processor<ul>
-<li>Filter  </li>
-<li>Amplifier  </li>
+<li>Filter<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fa2ca352b.png"
+                      alt="Pasted_image_20240115233324.png"
+                ><figcaption>Pasted_image_20240115233324.png</figcaption></figure></li>
+<li>Amplifier<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fa4370302.png"
+                      alt="Pasted_image_20240115233602.png"
+                ><figcaption>Pasted_image_20240115233602.png</figcaption></figure></li>
 </ul>
 </li>
 <li>Materials for microelectronics<ul>
@@ -72,7 +97,12 @@
 <li>Band Gap: 从valence band 到 conduction band 所需的能量</li>
 <li>Fermi level: 电子受能量激发会向更高能级跃迁，<ul>
 <li>At absolute zero,</li>
-<li>the surface of electron sea where no electrons will have enough energy to rise above the surface<br>  band gap 决定了不同材料导电性的不同  </li>
+<li>the surface of electron sea where no electrons will have enough energy to rise above the surface<br>  band gap 决定了不同材料导电性的不同<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fa5dbc18f.png"
+                      alt="Pasted_image_20240115234900.png"
+                ><figcaption>Pasted_image_20240115234900.png</figcaption></figure></li>
 </ul>
 </li>
 </ul>
@@ -92,7 +122,12 @@
 <li>Silicon的种类<br>  按照硅原子的排列划分<ul>
 <li>Amorphous: 非晶，只在少量原子&#x2F;分子尺度有序</li>
 <li>Crystalline: 单晶，整个一块硅晶体构成的材料</li>
-<li>Polycrystalline: 多晶，在很多原子&#x2F;分子尺度高度有序  </li>
+<li>Polycrystalline: 多晶，在很多原子&#x2F;分子尺度高度有序<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fa84e760b.png"
+                      alt="Pasted_image_20240116000028.png"
+                ><figcaption>Pasted_image_20240116000028.png</figcaption></figure></li>
 </ul>
 </li>
 <li>Doping<ul>
@@ -122,9 +157,19 @@
 <li>形成动态平衡，no net flux<br> 这时我们把中间电子移动动态平衡的这段区域叫Depletion Region（因为电子跑到最后能量会耗尽）<br> 把产生的电势叫做Built-in potential</li>
 </ol>
 <ul>
-<li>平衡方程： </li>
+<li>平衡方程：<br> <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7faa4349be.png"
+                      alt="Pasted_image_20240116002928.png"
+                ><figcaption>Pasted_image_20240116002928.png</figcaption></figure></li>
 <li>能级对齐<br>  当两块材料正常情况连接在一起时，他们的fermi level应该是对齐的，但当PN-junction形成时<ul>
-<li>P型材料交接处的fermi-level下降了，由于concentration gradients使电子更愿意呆在原地，而N型材料的fermi level则相应地上升了，两个加起来形成的总差距就是由于concentration gradients造成的，出于动态平衡的知识也就等于电势能  </li>
+<li>P型材料交接处的fermi-level下降了，由于concentration gradients使电子更愿意呆在原地，而N型材料的fermi level则相应地上升了，两个加起来形成的总差距就是由于concentration gradients造成的，出于动态平衡的知识也就等于电势能<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fabac58c4.png"
+                      alt="Pasted_image_20240116004632.png"
+                ><figcaption>Pasted_image_20240116004632.png</figcaption></figure></li>
 </ul>
 </li>
 </ul>
@@ -134,8 +179,17 @@
 <li>由能级图可知两个导带之间的距离导致电子不能正常的通过，如果我现在加一个电压来对抗甚至逆转由于fermi-level对齐产生的能量差，即P接正极，这样缩小了电场范围（Depletion Region）电子甚至可以导通产生电流（从P到N的电流）</li>
 </ul>
 </li>
-<li>reverse bias: 相反不能导通,但会有一点及其微弱的电流  
-  </li>
+<li>reverse bias: 相反不能导通,但会有一点及其微弱的电流<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fae144d1b.png"
+                      alt="Pasted_image_20240116010420.png"
+                ><figcaption>Pasted_image_20240116010420.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7face21796.png"
+                      alt="Pasted_image_20240116010156.png"
+                ><figcaption>Pasted_image_20240116010156.png</figcaption></figure></li>
 </ul>
 </li>
 <li>Application of PN-junction<ul>
@@ -147,19 +201,36 @@
 </li>
 <li>BJT（Bipolar Junction Transistor应用中我们称为三极管）<br>  顾名思义，我们可以把两个PN组合起来形成一个BJT<ul>
 <li>分类<br>  根据PN结的排布方式我们分为两种<ul>
-<li>npn &amp; pnp  
-  简要示意图的箭头代表PN结的方向（P指向N）</li>
+<li>npn &amp; pnp<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7faf437f24.png"
+                      alt="Pasted_image_20240116010851.png"
+                ><figcaption>Pasted_image_20240116010851.png</figcaption></figure><br>  简要示意图的箭头代表PN结的方向（P指向N）</li>
 </ul>
 </li>
-<li>Mode of operations<br>  观察我们想要得到的电流输出电流Ic分类  
-<ul>
+<li>Mode of operations<br>  观察我们想要得到的电流输出电流Ic分类<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fb072d329.png"
+                      alt="Pasted_image_20240116011821.png"
+                ><figcaption>Pasted_image_20240116011821.png</figcaption></figure><ul>
 <li>两结都零偏或反偏（cutoff mode）<br>  电路中几乎没有任何电流</li>
 <li>发射结正偏，接受结反偏（active mode）<ul>
 <li>amplifier</li>
 </ul>
 </li>
-<li>两结都正偏（saturation mode）  
-  </li>
+<li>两结都正偏（saturation mode）<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fb19ec4ae.png"
+                      alt="Pasted_image_20240116013115.png"
+                ><figcaption>Pasted_image_20240116013115.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fb31b6f57.png"
+                      alt="Pasted_image_20240116013256.png"
+                ><figcaption>Pasted_image_20240116013256.png</figcaption></figure></li>
 </ul>
 </li>
 </ul>
@@ -168,8 +239,12 @@
 <li>根据FET的工作原理，我们把他分成几类<ul>
 <li>n-channel &amp; p-channel<ul>
 <li>n-channel为NPN型，目的是利用gate把electons吸引到两个N之间使之导通</li>
-<li>p-channel为PNP型，目的是利用gate把holes吸引到两个P之间使之导通  
-  箭头指向为导通时电子移动方向</li>
+<li>p-channel为PNP型，目的是利用gate把holes吸引到两个P之间使之导通<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fb439d330.png"
+                      alt="Pasted_image_20240116142940.png"
+                ><figcaption>Pasted_image_20240116142940.png</figcaption></figure><br>  箭头指向为导通时电子移动方向</li>
 </ul>
 </li>
 <li>enhancement-mode &amp; depletion-mode<ul>
@@ -180,8 +255,12 @@
 </ul>
 </li>
 <li>工作原理<ul>
-<li>MOS capacitor  
-  改变metal的电压可以调制电阻，Oxide基本上阻断了电子直接被metal吸走，只会让电子远离channel取或者聚集在channel区域以实现channel的导通</li>
+<li>MOS capacitor<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fb536791b.png"
+                      alt="Pasted_image_20240116143753.png"
+                ><figcaption>Pasted_image_20240116143753.png</figcaption></figure><br>  改变metal的电压可以调制电阻，Oxide基本上阻断了电子直接被metal吸走，只会让电子远离channel取或者聚集在channel区域以实现channel的导通</li>
 <li>正常情况下PNjunction产生的built-in barrier阻断了沟道的导通</li>
 </ul>
 </li>
@@ -189,12 +268,22 @@
 </li>
 <li>Amplifier<ul>
 <li>amount of amplifier<ul>
-<li></li>
+<li><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fb6833113.png"
+                      alt="Pasted_image_20240116145420.png"
+                ><figcaption>Pasted_image_20240116145420.png</figcaption></figure></li>
 <li>gain 常用decibels(dB)计量，我们把一个数以10为底的对数值称为他的bel值bel(B)，dB代表十分之一B. 由于对数以1为界取正负，故dB值如果为正，说明实现了gain，如果为负，则说明实现了loss</li>
 </ul>
 </li>
 <li>amplifier power supply<ul>
-<li>毫无疑问amplifier的工作也需要能量,而且一部分能量也会以热能的形式耗散，我们把额外需要的能量称为DC sources supply，有能量耗散自然也就存在能量效率，因此我们定义$$Amplifier\ efficiency&#x3D;\frac{P_{out}}{P_{in}}$$  </li>
+<li>毫无疑问amplifier的工作也需要能量,而且一部分能量也会以热能的形式耗散，我们把额外需要的能量称为DC sources supply，有能量耗散自然也就存在能量效率，因此我们定义$$Amplifier\ efficiency&#x3D;\frac{P_{out}}{P_{in}}$$<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fb834a4c6.png"
+                      alt="Pasted_image_20240116172256.png"
+                ><figcaption>Pasted_image_20240116172256.png</figcaption></figure></li>
 </ul>
 </li>
 <li>ideal amplifier<br>  好的放大器是啥样的呢<ul>
@@ -213,20 +302,56 @@
 <li>signal waveforms<ul>
 <li>sine wave</li>
 <li>impulse</li>
-<li>step  
-  </li>
+<li>step<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fb93b93a4.png"
+                      alt="Pasted_image_20240116174239.png"
+                ><figcaption>Pasted_image_20240116174239.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fbb1a35de.png"
+                      alt="Pasted_image_20240116174258.png"
+                ><figcaption>Pasted_image_20240116174258.png</figcaption></figure></li>
 </ul>
 </li>
 <li>Filter</li>
-<li>A&#x2F;D converter &amp; D&#x2F;A converter  
-<ul>
-<li>sampling  </li>
-<li>quantize<br>  以多少v为一个阶梯代表一个bit呢？<br>  n bit 能代表$2^n$ 个binary level  
-  
-  </li>
+<li>A&#x2F;D converter &amp; D&#x2F;A converter<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fbc7195ba.png"
+                      alt="Pasted_image_20240116174728.png"
+                ><figcaption>Pasted_image_20240116174728.png</figcaption></figure><ul>
+<li>sampling<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fbde2a481.png"
+                      alt="Pasted_image_20240116174938.png"
+                ><figcaption>Pasted_image_20240116174938.png</figcaption></figure></li>
+<li>quantize<br>  以多少v为一个阶梯代表一个bit呢？<br>  n bit 能代表$2^n$ 个binary level<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fbf501b99.png"
+                      alt="Pasted_image_20240116175258.png"
+                ><figcaption>Pasted_image_20240116175258.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fc0cb03f7.png"
+                      alt="Pasted_image_20240116175333.png"
+                ><figcaption>Pasted_image_20240116175333.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fc34ca415.png"
+                      alt="Pasted_image_20240116181043.png"
+                ><figcaption>Pasted_image_20240116181043.png</figcaption></figure></li>
 </ul>
 </li>
-<li>communication system  </li>
+<li>communication system<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fc1f5c4ed.png"
+                      alt="Pasted_image_20240116180256.png"
+                ><figcaption>Pasted_image_20240116180256.png</figcaption></figure></li>
 <li>basic signal operations<ul>
 <li>addition</li>
 <li>subtraction</li>
@@ -237,15 +362,34 @@
 </ul>
 </li>
 <li>Memory<ul>
-<li>categories of memory  
-  </li>
+<li>categories of memory<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fc48d8a5f.png"
+                      alt="Pasted_image_20240116181258.png"
+                ><figcaption>Pasted_image_20240116181258.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fc5b10e8e.png"
+                      alt="Pasted_image_20240116181414.png"
+                ><figcaption>Pasted_image_20240116181414.png</figcaption></figure></li>
 <li>RAM<ul>
 <li>SRAM</li>
-<li>DRAM  </li>
+<li>DRAM<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fcaea7868.png"
+                      alt="Pasted_image_20240116182322.png"
+                ><figcaption>Pasted_image_20240116182322.png</figcaption></figure></li>
 </ul>
 </li>
 <li>ROM</li>
-<li>summary  </li>
+<li>summary<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7fc97a7fbd.png"
+                      alt="Pasted_image_20240116182241.png"
+                ><figcaption>Pasted_image_20240116182241.png</figcaption></figure></li>
 </ul>
 </li>
 <li><input disabled="" type="checkbox"> mode of operations of BJT</li>
@@ -254,6 +398,17 @@
 <li><input disabled="" type="checkbox"> filter</li>
 <li><input disabled="" type="checkbox"> D&#x2F;A converter</li>
 </ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>try image</title>
+    <url>/2025/03/17/try-image/</url>
+    <content><![CDATA[<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d7f874c1c10.jpg"
+                      alt="OIP.jpg"
+                ><figcaption>OIP.jpg</figcaption></figure></p>
 ]]></content>
   </entry>
 </search>
