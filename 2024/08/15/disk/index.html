@@ -15,7 +15,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://www..com/categories/"/>
+    <link rel="canonical" href="http://www..com/2024/08/15/disk/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -30,7 +30,7 @@
     
     <title>
         
-            Categories -
+            What is in the Disk Storage -
         
         DylanLiu&#39;s blog
     </title>
@@ -493,19 +493,341 @@
             <div class="main-content">
 
                 
-                    <div class="category-list-container">
-	<div >
-		<h1 class="category-header">
-			Categories
-		</h1>
-	</div>
-	<div class="category-list-content">
-		<ul class="all-category-list"><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/Self-talking/">Self-talking</a><span class="all-category-list-count">1</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/Technology/">Technology</a><span class="all-category-list-count">1</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/course/">course</a><span class="all-category-list-count">1</span></li></ul>
-	</div>
-	<div class="category-comments">
-		
-	</div>
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">What is in the Disk Storage</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/image.webp">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">HEMU LIU</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-08-15 13:25:35</span>
+        <span class="mobile">2024-08-15 13:25:35</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-03-17 19:37:28</span>
+            <span class="mobile">2025-03-17 19:37:28</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Technology/">Technology</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Disk-Storage-Computer-Orgnization/">Disk Storage, Computer Orgnization</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
 </div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>由于今天先启动了一下ubuntu系统，再启动windows系统时出现问题导致无法正常启动，最后了解到是由于我加装一块硬盘导致系统启动引导分区出现迁移（万恶的windows自动更新）遂写此篇</p>
+<h1 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h1><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>分区（Partition）</th>
+<th>分卷（Volume）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>定义</td>
+<td>物理磁盘上的实际划分，用于管理磁盘的物理存储空间</td>
+<td>逻辑上的存储单元，用于操作系统层面的存储管理</td>
+</tr>
+<tr>
+<td>实现层次</td>
+<td>硬件层次</td>
+<td>操作系统层次</td>
+</tr>
+<tr>
+<td>组成</td>
+<td>一个连续的物理磁盘区域</td>
+<td>可以由一个或多个分区组成，可能跨多个物理磁盘</td>
+</tr>
+<tr>
+<td>数量限制</td>
+<td>MBR最多4个主分区，GPT支持更多</td>
+<td>由操作系统和卷管理器决定，通常没有硬性限制</td>
+</tr>
+<tr>
+<td>管理方式</td>
+<td>分区表（MBR、GPT）</td>
+<td>文件系统、卷管理器（如Windows动态卷、Linux LVM）</td>
+</tr>
+<tr>
+<td>示例</td>
+<td>磁盘分区C:、D:、E:</td>
+<td>LVM卷组中的逻辑卷、Windows动态卷</td>
+</tr>
+</tbody></table>
+<h2 id="GPT（GUID-Partition-Table）"><a href="#GPT（GUID-Partition-Table）" class="headerlink" title="GPT（GUID Partition Table）"></a>GPT（GUID Partition Table）</h2><h3 id="GUID-Globally-Unique-Identifier"><a href="#GUID-Globally-Unique-Identifier" class="headerlink" title="GUID(Globally Unique Identifier)"></a>GUID(Globally Unique Identifier)</h3><p>GUID 用于确保每个分区的唯一标识</p>
+<h3 id="Structure-of-GPT"><a href="#Structure-of-GPT" class="headerlink" title="Structure of GPT"></a>Structure of GPT</h3><ul>
+<li><strong>保护MBR（Protective MBR）</strong>：位于磁盘的第一个扇区，保护GPT磁盘不会被旧的MBR工具误识别为未分区磁盘。</li>
+<li><strong>GPT头部（Primary GPT Header）</strong>：位于保护MBR之后，包含GPT的全局信息和主分区表的位置。</li>
+<li><strong>分区条目数组（Partition Entry Array）</strong>：包含所有分区条目，每个条目128字节。通常系统允许多达128个分区。</li>
+<li><strong>备份GPT头部和分区条目数组（Backup GPT Header and Partition Entry Array）</strong>：位于磁盘末尾，用于冗余和恢复。</li>
+</ul>
+<p>以我的电脑为例</p>
+<ul>
+<li>磁盘管理界面<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d8070b46160.png"
+                      alt="disk management view"
+                ><figcaption>disk management view</figcaption></figure></li>
+<li>diskpart界面<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d807c5062cc.png"
+                      alt="diskpart view"
+                ><figcaption>diskpart view</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d807fe71729.png"
+                      alt="diskpart view new"
+                ><figcaption>diskpart view new</figcaption></figure></li>
+<li>linux<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d808e3e7c0c.png"
+                      alt="linux disk"
+                ><figcaption>linux disk</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d8093ee8f61.png"
+                      alt="linux2.png"
+                ><figcaption>linux2.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d8095b23504.png"
+                      alt="linux3.png"
+                ><figcaption>linux3.png</figcaption></figure></li>
+<li>此处磁盘1应该是电脑自带的512G SSD<ul>
+<li>分区1就是ESP</li>
+<li>分区2是Windows系统的保留分区</li>
+<li>分区3是我分卷的C盘</li>
+<li>分区4是我分卷的D盘</li>
+<li>分区5是恢复分区</li>
+</ul>
+</li>
+<li>磁盘2则是我加装的一块1T SSD<ul>
+<li>分区1就是ESP</li>
+<li>分区2就是Windows系统的保留分区</li>
+<li>分区3是我分卷的E盘</li>
+<li>除了恢复分区的剩下的分区被我用来做成了Linux Ubuntu</li>
+</ul>
+</li>
+</ul>
+<h1 id="计算机启动流程"><a href="#计算机启动流程" class="headerlink" title="计算机启动流程"></a>计算机启动流程</h1><h2 id="POST（Power-On-Self-Test）"><a href="#POST（Power-On-Self-Test）" class="headerlink" title="POST（Power-On Self Test）"></a>POST（Power-On Self Test）</h2><p>在计算机打开电源的时候，首先BIOS（old）&#x2F;UEFI(new)会检查硬件是否正常工作</p>
+<h2 id="UEFI"><a href="#UEFI" class="headerlink" title="UEFI"></a>UEFI</h2><p>UEFI初始化后读取引导配置，引导配置数据通常存储在EFI系统分区（EFI System Partition,ESP）中的BCD(Boot Configuration Data)</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> What is in the Disk Storage</li>
+        <li><strong>Author:</strong> HEMU LIU</li>
+        <li><strong>Created at
+                :</strong> 2024-08-15 13:25:35</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2025-03-17 19:37:28
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://matrixhackin.github.io/2024/08/15/disk/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/Disk-Storage-Computer-Orgnization/">#Disk Storage, Computer Orgnization</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/10/11/Introduction-to-ME/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">Introduction to ME</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/08/14/poem-life/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">生命</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">What is in the Disk Storage</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A3%81%E7%9B%98"><span class="nav-text">磁盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GPT%EF%BC%88GUID-Partition-Table%EF%BC%89"><span class="nav-text">GPT（GUID Partition Table）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GUID-Globally-Unique-Identifier"><span class="nav-text">GUID(Globally Unique Identifier)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Structure-of-GPT"><span class="nav-text">Structure of GPT</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B"><span class="nav-text">计算机启动流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#POST%EF%BC%88Power-On-Self-Test%EF%BC%89"><span class="nav-text">POST（Power-On Self Test）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UEFI"><span class="nav-text">UEFI</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
 
 
                 
@@ -588,6 +910,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">

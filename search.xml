@@ -3,36 +3,8 @@
   <entry>
     <title>Hello World</title>
     <url>/2024/08/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+    <content><![CDATA[<p>Welcome to Dylan Liu’s Blog</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>try new post</title>
-    <url>/2024/08/14/try-new-post/</url>
-    <content><![CDATA[<p>本想拍<br>晨光中立在路灯上的鸟，<br>我走近，她停住，<br>我停住，她飞远，<br>灵台方寸间容不下活物<br>我想<br>除了路灯外<br>总要有点蹦蹦跳跳的生命</p>
-<p>最心喜的夹竹桃也在冬晨起不来床<br>其实一整日都见不到<br>或许我们都睡着了<br>她才醒<br>除了日月外<br>总要有点蹦蹦跳跳的生命<br>我想</p>
-<p>我坐在椅子上不动<br>想破教室后面的一张红纸<br>他写“于道各努力，千里自同风”<br>我也想这么写<br>但我还得想想<br>罢<br>我写<br>“于热爱中被救赎”</p>
-<p>总有些什么要睡去<br>总有些什么要醒来</p>
-<p>我坐在椅子上不动<br>小胖子坐在我对面<br>蹦蹦跳跳<br>阳光卧在水怀里<br>蹦蹦跳跳</p>
-]]></content>
-      <categories>
-        <category>Self-talking</category>
-      </categories>
-      <tags>
-        <tag>Self-talking</tag>
-      </tags>
   </entry>
   <entry>
     <title>Introduction to ME</title>
@@ -253,6 +225,133 @@
       </categories>
       <tags>
         <tag>Microelectonics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>What is in the Disk Storage</title>
+    <url>/2024/08/15/disk/</url>
+    <content><![CDATA[<p>由于今天先启动了一下ubuntu系统，再启动windows系统时出现问题导致无法正常启动，最后了解到是由于我加装一块硬盘导致系统启动引导分区出现迁移（万恶的windows自动更新）遂写此篇</p>
+<h1 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h1><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>分区（Partition）</th>
+<th>分卷（Volume）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>定义</td>
+<td>物理磁盘上的实际划分，用于管理磁盘的物理存储空间</td>
+<td>逻辑上的存储单元，用于操作系统层面的存储管理</td>
+</tr>
+<tr>
+<td>实现层次</td>
+<td>硬件层次</td>
+<td>操作系统层次</td>
+</tr>
+<tr>
+<td>组成</td>
+<td>一个连续的物理磁盘区域</td>
+<td>可以由一个或多个分区组成，可能跨多个物理磁盘</td>
+</tr>
+<tr>
+<td>数量限制</td>
+<td>MBR最多4个主分区，GPT支持更多</td>
+<td>由操作系统和卷管理器决定，通常没有硬性限制</td>
+</tr>
+<tr>
+<td>管理方式</td>
+<td>分区表（MBR、GPT）</td>
+<td>文件系统、卷管理器（如Windows动态卷、Linux LVM）</td>
+</tr>
+<tr>
+<td>示例</td>
+<td>磁盘分区C:、D:、E:</td>
+<td>LVM卷组中的逻辑卷、Windows动态卷</td>
+</tr>
+</tbody></table>
+<h2 id="GPT（GUID-Partition-Table）"><a href="#GPT（GUID-Partition-Table）" class="headerlink" title="GPT（GUID Partition Table）"></a>GPT（GUID Partition Table）</h2><h3 id="GUID-Globally-Unique-Identifier"><a href="#GUID-Globally-Unique-Identifier" class="headerlink" title="GUID(Globally Unique Identifier)"></a>GUID(Globally Unique Identifier)</h3><p>GUID 用于确保每个分区的唯一标识</p>
+<h3 id="Structure-of-GPT"><a href="#Structure-of-GPT" class="headerlink" title="Structure of GPT"></a>Structure of GPT</h3><ul>
+<li><strong>保护MBR（Protective MBR）</strong>：位于磁盘的第一个扇区，保护GPT磁盘不会被旧的MBR工具误识别为未分区磁盘。</li>
+<li><strong>GPT头部（Primary GPT Header）</strong>：位于保护MBR之后，包含GPT的全局信息和主分区表的位置。</li>
+<li><strong>分区条目数组（Partition Entry Array）</strong>：包含所有分区条目，每个条目128字节。通常系统允许多达128个分区。</li>
+<li><strong>备份GPT头部和分区条目数组（Backup GPT Header and Partition Entry Array）</strong>：位于磁盘末尾，用于冗余和恢复。</li>
+</ul>
+<p>以我的电脑为例</p>
+<ul>
+<li>磁盘管理界面<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d8070b46160.png"
+                      alt="disk management view"
+                ><figcaption>disk management view</figcaption></figure></li>
+<li>diskpart界面<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d807c5062cc.png"
+                      alt="diskpart view"
+                ><figcaption>diskpart view</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d807fe71729.png"
+                      alt="diskpart view new"
+                ><figcaption>diskpart view new</figcaption></figure></li>
+<li>linux<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d808e3e7c0c.png"
+                      alt="linux disk"
+                ><figcaption>linux disk</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d8093ee8f61.png"
+                      alt="linux2.png"
+                ><figcaption>linux2.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d8095b23504.png"
+                      alt="linux3.png"
+                ><figcaption>linux3.png</figcaption></figure></li>
+<li>此处磁盘1应该是电脑自带的512G SSD<ul>
+<li>分区1就是ESP</li>
+<li>分区2是Windows系统的保留分区</li>
+<li>分区3是我分卷的C盘</li>
+<li>分区4是我分卷的D盘</li>
+<li>分区5是恢复分区</li>
+</ul>
+</li>
+<li>磁盘2则是我加装的一块1T SSD<ul>
+<li>分区1就是ESP</li>
+<li>分区2就是Windows系统的保留分区</li>
+<li>分区3是我分卷的E盘</li>
+<li>除了恢复分区的剩下的分区被我用来做成了Linux Ubuntu</li>
+</ul>
+</li>
+</ul>
+<h1 id="计算机启动流程"><a href="#计算机启动流程" class="headerlink" title="计算机启动流程"></a>计算机启动流程</h1><h2 id="POST（Power-On-Self-Test）"><a href="#POST（Power-On-Self-Test）" class="headerlink" title="POST（Power-On Self Test）"></a>POST（Power-On Self Test）</h2><p>在计算机打开电源的时候，首先BIOS（old）&#x2F;UEFI(new)会检查硬件是否正常工作</p>
+<h2 id="UEFI"><a href="#UEFI" class="headerlink" title="UEFI"></a>UEFI</h2><p>UEFI初始化后读取引导配置，引导配置数据通常存储在EFI系统分区（EFI System Partition,ESP）中的BCD(Boot Configuration Data)</p>
+]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Disk Storage, Computer Orgnization</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>生命</title>
+    <url>/2024/08/14/poem-life/</url>
+    <content><![CDATA[<p>本想拍<br>晨光中立在路灯上的鸟，<br>我走近，她停住，<br>我停住，她飞远，<br>灵台方寸间容不下活物<br>我想<br>除了路灯外<br>总要有点蹦蹦跳跳的生命</p>
+<p>最心喜的夹竹桃也在冬晨起不来床<br>其实一整日都见不到<br>或许我们都睡着了<br>她才醒<br>除了日月外<br>总要有点蹦蹦跳跳的生命<br>我想</p>
+<p>我坐在椅子上不动<br>想破教室后面的一张红纸<br>他写“于道各努力，千里自同风”<br>我也想这么写<br>但我还得想想<br>罢<br>我写<br>“于热爱中被救赎”</p>
+<p>总有些什么要睡去<br>总有些什么要醒来</p>
+<p>我坐在椅子上不动<br>小胖子坐在我对面<br>蹦蹦跳跳<br>阳光卧在水怀里<br>蹦蹦跳跳</p>
+]]></content>
+      <categories>
+        <category>Self-talking</category>
+      </categories>
+      <tags>
+        <tag>Poem life</tag>
       </tags>
   </entry>
 </search>
