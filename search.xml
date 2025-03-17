@@ -27,6 +27,9 @@
 <p>总有些什么要睡去<br>总有些什么要醒来</p>
 <p>我坐在椅子上不动<br>小胖子坐在我对面<br>蹦蹦跳跳<br>阳光卧在水怀里<br>蹦蹦跳跳</p>
 ]]></content>
+      <categories>
+        <category>Self-talking</category>
+      </categories>
       <tags>
         <tag>Self-talking</tag>
       </tags>
@@ -399,16 +402,11 @@
 <li><input disabled="" type="checkbox"> D&#x2F;A converter</li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>try image</title>
-    <url>/2025/03/17/try-image/</url>
-    <content><![CDATA[<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/03/17/67d7f874c1c10.jpg"
-                      alt="OIP.jpg"
-                ><figcaption>OIP.jpg</figcaption></figure></p>
-]]></content>
+      <categories>
+        <category>course</category>
+      </categories>
+      <tags>
+        <tag>Microelectonics</tag>
+      </tags>
   </entry>
 </search>
