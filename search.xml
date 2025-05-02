@@ -229,7 +229,7 @@
   </entry>
   <entry>
     <title>What is in the Disk Storage</title>
-    <url>/2024/08/15/disk/</url>
+    <url>/2023/08/15/disk/</url>
     <content><![CDATA[<p>由于今天先启动了一下ubuntu系统，再启动windows系统时出现问题导致无法正常启动，最后了解到是由于我加装一块硬盘导致系统启动引导分区出现迁移（万恶的windows自动更新）遂写此篇</p>
 <h1 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h1><table>
 <thead>
