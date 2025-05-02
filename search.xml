@@ -454,27 +454,7 @@
                      data-src="https://a1.boltp.com/2025/05/01/68137033e809d.jpg"
                       alt="This computer is armed!"
                 ><figcaption>This computer is armed!</figcaption></figure></p>
-<p>We lived in a house in the downtown. Although it’s reported that it’s really dangerous there(A gunfight may break out),But during the 5 days I was there, everything was very peaceful.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/68137035c7909.jpg"
-                      alt="The big house in America!"
-                ><figcaption>The big house in America!</figcaption></figure></p>
-<p>On the first day at GA, we three Chinese college students, who were on the other side of the earth for the first time, felt extremely curious and confused. The streets here were too empty compared to those in China, and there were almost no people.The prices here are too high. A bowl of noodles that costs only 10 yuan in China costs 120 yuan here.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/681370307a474.jpg"
-                      alt="Empty subway station"
-                ><figcaption>Empty subway station</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/6813702d73bc0.jpg"
-                      alt="120 CNY noodles!"
-                ><figcaption>120 CNY noodles!</figcaption></figure></p>
-<p>We were very happy to find our seniors when we first arrived here: they were studying for a doctorate at Georgia Tech, but their majors were mainly robotics engineering and physics. We had a delicious BBQ together. Almost everyone had their own car when they first came to the United States to study for a doctorate. The seniors drove us on the streets at a speed that would definitely get us arrested in China. However, there were too few people in Atlanta, and there were almost no pedestrians on the streets.<br><figure class="image-caption"><img  
+<p>We were very happy to find our seniors when we first arrived here: they were studying for a doctorate at Georgia Tech, which is one of the most famous Tech Universities around the world. As said, they got over 2000 USD salaries! But their majors were mainly robotics engineering and physics. We had a delicious BBQ together. Almost everyone had their own car when they first came to the United States to study for a doctorate. The seniors drove us on the streets at a speed that would definitely get us arrested in China. However, there were too few people in Atlanta, and there were almost no pedestrians on the streets.<br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://a1.boltp.com/2025/05/01/6813702dd353d.jpg"
@@ -486,7 +466,13 @@
                      data-src="https://a1.boltp.com/2025/05/01/68137031b918b.jpg"
                       alt="Work hard!"
                 ><figcaption>Work hard!</figcaption></figure></p>
-<p>Of course, the most important thing to do when attending a conference is to visit the exhibition! I collected a lot of beautiful stickers and pins to decorate my Macbook and backpack.<br><figure class="image-caption"><img  
+<p>Of course, the most important thing to do when attending a conference is to visit the exhibition! I collected a lot of beautiful stickers and pins to decorate my Macbook and backpack.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/68137031ef006.jpg"
+                      alt="SC Stickers"
+                ><figcaption>SC Stickers</figcaption></figure><br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://a1.boltp.com/2025/05/01/6813702dbc441.jpg"
@@ -509,6 +495,20 @@
                      data-src="https://a1.boltp.com/2025/05/01/68137030bad58.jpg"
                       alt="Poster of Tsinghua U"
                 ><figcaption>Poster of Tsinghua U</figcaption></figure></p>
+<p>Although SC does not have the 3000W power consumption limit for building a cluster like ASC, TsingHua U also uses Grafana for real-time power consumption monitoring. The cloud-naive project I developed based on kubernetes at NUS also uses Prometheus based on Grafana for power consumption detection. This real-time visual monitoring is indeed very valuable, because HPC software is likely to get stuck due to various strange problems when running tests. We thought it was successfully run, but in fact the application was stuck in the IO part, the CPU did not run, and the system had almost no power consumption.</p>
+<p>The most important point of HPC application optimization is still to find a good scheduling strategy to overlap communication and computing overhead. Like us, they first used Profiler Tools to profile the application, but I usually only use Intel Vtune Amplifier. According to their experience, NVIDIA Profiling Tools is more effective when executing GPU tasks. In addition, it is crucial to properly rearrange memory to make full use of cache hits. Maybe I will write a blog about the detailed optimization strategy. Honestly speaking, I am quite busy these days.</p>
+<p>The four days in SC are very unforgettable. I think this will be one of the most precious memories in my life. I joined ACM HPC SIG and also left Shenzhen’s mark on the world HPC enthusiasts map. Goodbye SC, I hope that one day I can produce scientific research results that will be accepted by you.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/681370356b123.jpg"
+                      alt="Shenzhen HPC SIG!"
+                ><figcaption>Shenzhen HPC SIG!</figcaption></figure><br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/6813703536ac2.jpg"
+                      alt="Bye SC!"
+                ><figcaption>Bye SC!</figcaption></figure></p>
 ]]></content>
       <categories>
         <category>Conference</category>
