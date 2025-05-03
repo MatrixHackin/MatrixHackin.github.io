@@ -3,7 +3,15 @@
   <entry>
     <title>Hello World</title>
     <url>/2024/08/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to Dylan Liu’s Blog</p>
+    <content><![CDATA[<p>Hi, there! Welcome to Dylan Liu’s Blog.</p>
+<p>I used to use Notion to record my research work and WeChat to record my life and technical experience, but many foreign friends have difficulty accessing these contents. As a student who wants to go out into the world, I need a broader platform to show myself and find like-minded friends, so I developed this website to share my experiences, technical experience and insights, and I am currently migrating the content. Welcome everyone to communicate.</p>
+<p>My Chinese Name is HEMU LIU, I am a junior student studying at <a class="link"   href="https://www.sustech.edu.cn/" >SUSTech <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>, Shenzhen, China.<br>I have a strong research interest in HPC &amp; AI, especially the joint training and generalization performance improvement of multimodal large models on large-scale distributed systems. Two years ago, I joined the <a class="link"   href="https://www.imed-lab.com/" >iMED <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> team led by Professor Liu Jiang (focusing on artificial intelligence in ophthalmology). In iMED, I have been working on improving the generalization performance of models in the field of medical imaging, especially focusing on fine-tuning based on large models. Recently, I would like to combine the characteristics of federated learning to protect medical data privacy and make the best use of computing resources and data sets to train and tune large-scale models.</p>
+<p>In order to further understand the large-scale distributed computing clusters used for training and deploying models, I participated in many internationally renowned HPC competitions and achieved excellent results(Specific awards will be listed in the CV shown below). In the competition, I mainly focused on MPI process communication optimization and openMP thread communication optimization, as well as optimization based on specific processor instruction set architecture. These experiences have given me a deeper understanding of computer architecture. This understanding also helps me in my research on deep learning algorithms.</p>
+<p>I am preparing to apply for my postgraduate study opportunities recently, hoping to further carry out research work with like-minded friends and make my own contribution to technological development from the perspectives of science and engineering. You are very welcome to contact me through the contact information on the homepage.</p>
+<iframe src="/personal_cv.pdf" width="100%" height="100%">
+
+<p>This browser does not support PDFs. Please download the PDF to view it: <a href="/personal_cv.pdf">Download PDF</a></p>
+</iframe>
 ]]></content>
   </entry>
   <entry>
