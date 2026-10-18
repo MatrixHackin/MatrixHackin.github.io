@@ -201,14 +201,8 @@ navbar:
       path: /archives 
       icon: fa-regular fa-archive # can be empty
     About: 
+      path: /about/
       icon: fa-regular fa-user
-      submenus:
-    #    Me: /about
-    #    Github: https://github.com/EvanNotFound/hexo-theme-redefine
-        Blog: /
-        dylanliublog.com: https://dylanliublog.com
-        GitHub Pages: https://matrixhackin.github.io
-    #     Friends: /friends
     # Links: 
     #   icon: fa-regular fa-link
     #   submenus:
@@ -245,6 +239,9 @@ home:
       Categories: 
         path: /categories 
         icon: fa-regular fa-folder # can be empty
+      About: 
+        path: /about/
+        icon: fa-regular fa-user
       # ...... # you can add more
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
