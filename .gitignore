@@ -1,0 +1,18 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Hexo build & deploy artifacts (regenerated locally)
+node_modules/
+public/
+.deploy_git/
+.deploy*/
+db.json
+_multiconfig.yml
+
+# Optional local overrides
+.env
+.env.*
