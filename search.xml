@@ -1,19 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/08/12/hello-world/</url>
-    <content><![CDATA[<p>Hi, there! Welcome to Dylan Liu’s Blog.</p>
-<p>I used to use Notion to record my research work and WeChat to record my life and technical experience, but many foreign friends have difficulty accessing these contents. As a student who wants to go out into the world, I need a broader platform to show myself and find like-minded friends, so I developed this website to share my experiences, technical experience and insights, and I am currently migrating the content. Welcome everyone to communicate.</p>
-<p>My Chinese Name is HEMU LIU, I am a junior student studying at <a class="link"   href="https://www.sustech.edu.cn/" >SUSTech <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>, Shenzhen, China.<br>I have a strong research interest in HPC &amp; AI, especially the joint training and generalization performance improvement of multimodal large models on large-scale distributed systems. Two years ago, I joined the <a class="link"   href="https://www.imed-lab.com/" >iMED <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> team led by Professor <a class="link"   href="https://www.sustech.edu.cn/en/faculties/liujiang.html" >Liu Jiang <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> (focusing on artificial intelligence in ophthalmology). In iMED, I have been working on improving the generalization performance of models in the field of medical imaging, especially focusing on fine-tuning based on large models. Recently, I would like to combine the characteristics of federated learning to protect medical data privacy and make the best use of computing resources and data sets to train and tune large-scale models.</p>
-<p>In order to further understand the large-scale distributed computing clusters used for training and deploying models, I participated in many internationally renowned HPC competitions and achieved excellent results and attend many national conference like SC24,Atlanta, SCA24, Sydney etc.(Specific awards will be listed in the CV shown below). In the competition, I mainly focused on MPI process communication optimization and openMP thread communication optimization, as well as optimization based on specific processor instruction set architecture. These experiences have given me a deeper understanding of computer architecture. This understanding also helps me in my research on deep learning algorithms. During the summer vacation of 2024, I also went to <a class="link"   href="https://nus.edu.sg/" >NUS <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> to learn technical knowledge of cloud computing and Kubernetes from <a class="link"   href="https://www.comp.nus.edu.sg/cs/people/tbma/" >Prof.Richard TB Ma <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>, which enriched my experience in deploying distributed applications on the cloud. An artificial intelligence project that can be stably used by users is a good work.</p>
-<p>I am preparing to apply for my postgraduate study opportunities recently, hoping to further carry out research work with like-minded friends and make my own contribution to technological development from the perspectives of science and engineering. You are very welcome to contact me through the contact information on the homepage.</p>
-<div style="position: relative; width: 100%; padding-top: 141.42%; /* A4纸比例为210mm:297mm ≈ 1:1.4142 */">
-  <iframe src="/personal_cv.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
-</div>
-
-
+    <title>One of the best HPC Competition around the world-ASC24</title>
+    <url>/2024/04/20/ASC/</url>
+    <content><![CDATA[<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a143a164e.jpg"
+                      alt="SUSTech ASC Team"
+                ><figcaption>SUSTech ASC Team</figcaption></figure><br>ASC is one of the three major supercomputing competitions in the world, along with SC and ISC. ASC organizers are usually from a top university in China. We at SUSTech have also hosted ASC22-23. ASC not only requires us to install drivers and OS from bare metal to build a high-performance computing cluster with multiple machines connected, but also requires us to run HPC software on our own supercomputing cluster under limited power consumption and pass test samples. This is a highly comprehensive challenge.</p>
+<p>After nearly half a year of careful preparation, we finally learned that the proposal we submitted in the preliminary round passed the assessment of the competition committee. We will go to Shanghai to compete in the live finals with 20 university teams from all over the world.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a143a1800.jpg"
+                      alt="Proposal of SUSTech Team"
+                ><figcaption>Proposal of SUSTech Team</figcaption></figure></p>
+<p>The first day’s schedule was mainly about setting up the machines. We installed the eight NVIDIA A100 graphics cards we brought with us on four of the machines, and then began to configure the operating system for each machine.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a14de7d83.jpg"
+                      alt="Configuring OS"
+                ><figcaption>Configuring OS</figcaption></figure></p>
+<p>We chose UBUNTU 22.04 as the operating system, but found that other teams mostly used Red Hat operating systems. Later we learned that Debian operating systems sacrificed some communication performance in pursuit of user experience. However, we did not prepare a system disk for the Red Hat operating system at the time, so we had to bite the bullet and go for it.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a14de79b6.jpg"
+                      alt="BIOS which is not common to see nowadays"
+                ><figcaption>BIOS which is not common to see nowadays</figcaption></figure></p>
+<p>To be honest, it took us a lot of effort to configure this four-machine, eight-card HPC cluster. It was a very difficult journey, especially the network communication problem between the four machines. For some reason, our IB network cable was not detected by the IB driver, and a GPU on host No. 3 was not recognized. If the IB network is not configured properly, the Ethernet-based communication method will greatly increase the communication overhead across nodes.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a144cd99f.jpg"
+                      alt="Can you believe how expensive this InfiniBand cable is?"
+                ><figcaption>Can you believe how expensive this InfiniBand cable is?</figcaption></figure></p>
+<p>We could only reinstall the IB driver and set the IP permissions between nodes. The GPU was found to be not correctly identified because the PLIE slot was loose. This was a very tense day, but fortunately we finally succeeded in getting our cluster up and running and started running HPL tests. The ASC competition has a power consumption limit of 3kW, but the new generation of Intel CPUs installed on the servers seem to have extremely high no-load power consumption, so everyone’s power consumption exceeded the limit on the first day of testing.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a202ea952.jpg"
+                      alt="Power Limit Warning"
+                ><figcaption>Power Limit Warning</figcaption></figure></p>
+<p>In the next few days of the competition, we began to run the test samples according to the established plan. The actual test samples issued in the competition were much larger than the reference samples, and it really required good time planning to complete them within the limited time. In the two competition questions I was responsible for, openCAEPoro and GOMARS, openCAEPoro showed a lot of small matrix multiplications during operation, which brought unnecessary communication waiting overhead. We used local memory rearrangement and specific small matrix multiplication libraries for optimization. GOMARS had many strange errors during on-site compilation. I don’t know why it can run smoothly on a single node but will run empty when running on multiple nodes. There should be problems in the MPI communication layer. But in the end, due to lack of time, we only submitted the results of a single node.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a143a1b70.jpg"
+                      alt="On-site testing"
+                ><figcaption>On-site testing</figcaption></figure></p>
+<p>In the tense competition, although we did not have outstanding performance in a single question, our overall result was good, so we finally won the first prize and the best team award.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a14de763f.jpg"
+                      alt="First Prize!"
+                ><figcaption>First Prize!</figcaption></figure></p>
+<p>In addition to the competition, the most enjoyable thing is to make friends with HPC enthusiasts from all over the world. We and the team from Shanghai University, Hong Kong Polytechnic University, and Qilu University of Technology won the first place in the team competition.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a1440d5ba.jpg"
+                      alt="We are group competition winner!"
+                ><figcaption>We are group competition winner!</figcaption></figure></p>
+<p>It is worth mentioning that I also made good friends from the University of Nuremberg in Germany.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a220b11b1.jpg"
+                      alt="Friends from Germany"
+                ><figcaption>Friends from Germany</figcaption></figure></p>
+<p>The most exciting thing was that Professor Jack Dongarra, Turing Award winner, founder of HPL, and initiator of the TOP500 HPC cluster, also came to the scene and took a photo with us. The last time I met a Turing machine winner was Professor Joseph Sifakis at the Sifakis Institute for Trusted Autonomy at SUSTech. Of course, I was closer to Professor Dongarra this time.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a14308c7f.jpg"
+                      alt="Photo with Prof.Jack Dongarra!"
+                ><figcaption>Photo with Prof.Jack Dongarra!</figcaption></figure></p>
+<p>Of course, we can’t forget our old friends, the team from National Tsing Hua University in Taiwan. Their leader, Prof. Jerry Chou, also came to the scene. I have been listening to Prof. Chou’s open courses online, including parallel programming and operating systems. This time I also met him in person.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a143a1940.jpg"
+                      alt="Prof. Jerry Chou"
+                ><figcaption>Prof. Jerry Chou</figcaption></figure></p>
+<p>The strength of the National Tsinghua Supercomputing Team in Taiwan is very strong. They have won the ASC championship. We met them in Sydney some time ago. It was a pleasure to communicate with them. They also gave us a treasure that is said to be often used by developers at TSMC and NVIDIA:GUAIGUAI(A snack whose name means obedient and submissive. It is said that if you put it on the server, the server will run well.)</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a143a19d2.jpg"
+                      alt="National Tsinghua U Team with us!"
+                ><figcaption>National Tsinghua U Team with us!</figcaption></figure><br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/02/6814a14de5770.jpg"
+                      alt="Treasure from National Tsinghua U"
+                ><figcaption>Treasure from National Tsinghua U</figcaption></figure></p>
 ]]></content>
+      <categories>
+        <category>Conference</category>
+      </categories>
+      <tags>
+        <tag>ASC, China, Shanghai</tag>
+      </tags>
   </entry>
   <entry>
     <title>Introduction to ME</title>
@@ -237,416 +325,64 @@
       </tags>
   </entry>
   <entry>
-    <title>What is in the Disk Storage</title>
-    <url>/2023/08/15/disk/</url>
-    <content><![CDATA[<p>由于今天先启动了一下ubuntu系统，再启动windows系统时出现问题导致无法正常启动，最后了解到是由于我加装一块硬盘导致系统启动引导分区出现迁移（万恶的windows自动更新）遂写此篇</p>
-<h1 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h1><table>
-<thead>
-<tr>
-<th>特性</th>
-<th>分区（Partition）</th>
-<th>分卷（Volume）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>定义</td>
-<td>物理磁盘上的实际划分，用于管理磁盘的物理存储空间</td>
-<td>逻辑上的存储单元，用于操作系统层面的存储管理</td>
-</tr>
-<tr>
-<td>实现层次</td>
-<td>硬件层次</td>
-<td>操作系统层次</td>
-</tr>
-<tr>
-<td>组成</td>
-<td>一个连续的物理磁盘区域</td>
-<td>可以由一个或多个分区组成，可能跨多个物理磁盘</td>
-</tr>
-<tr>
-<td>数量限制</td>
-<td>MBR最多4个主分区，GPT支持更多</td>
-<td>由操作系统和卷管理器决定，通常没有硬性限制</td>
-</tr>
-<tr>
-<td>管理方式</td>
-<td>分区表（MBR、GPT）</td>
-<td>文件系统、卷管理器（如Windows动态卷、Linux LVM）</td>
-</tr>
-<tr>
-<td>示例</td>
-<td>磁盘分区C:、D:、E:</td>
-<td>LVM卷组中的逻辑卷、Windows动态卷</td>
-</tr>
-</tbody></table>
-<h2 id="GPT（GUID-Partition-Table）"><a href="#GPT（GUID-Partition-Table）" class="headerlink" title="GPT（GUID Partition Table）"></a>GPT（GUID Partition Table）</h2><h3 id="GUID-Globally-Unique-Identifier"><a href="#GUID-Globally-Unique-Identifier" class="headerlink" title="GUID(Globally Unique Identifier)"></a>GUID(Globally Unique Identifier)</h3><p>GUID 用于确保每个分区的唯一标识</p>
-<h3 id="Structure-of-GPT"><a href="#Structure-of-GPT" class="headerlink" title="Structure of GPT"></a>Structure of GPT</h3><ul>
-<li><strong>保护MBR（Protective MBR）</strong>：位于磁盘的第一个扇区，保护GPT磁盘不会被旧的MBR工具误识别为未分区磁盘。</li>
-<li><strong>GPT头部（Primary GPT Header）</strong>：位于保护MBR之后，包含GPT的全局信息和主分区表的位置。</li>
-<li><strong>分区条目数组（Partition Entry Array）</strong>：包含所有分区条目，每个条目128字节。通常系统允许多达128个分区。</li>
-<li><strong>备份GPT头部和分区条目数组（Backup GPT Header and Partition Entry Array）</strong>：位于磁盘末尾，用于冗余和恢复。</li>
-</ul>
-<p>以我的电脑为例</p>
-<ul>
-<li>磁盘管理界面<br>  <figure class="image-caption"><img  
+    <title>Studying at the best Universitie in Singapore-NUS</title>
+    <url>/2024/08/02/NUS/</url>
+    <content><![CDATA[<p>I am very honored to have passed the selection process and joined NUS this summer to learn about cloud computing from Professor Richard TB Ma.<br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/03/17/67d8070b46160.png"
-                      alt="disk management view"
-                ><figcaption>disk management view</figcaption></figure></li>
-<li>diskpart界面<br>  <figure class="image-caption"><img  
+                     data-src="https://a2.boltp.com/2025/05/03/6815e8b1d70ac.jpg"
+                      alt="Prof.Richard TB Ma @ NUS"
+                ><figcaption>Prof.Richard TB Ma @ NUS</figcaption></figure><br>NUS is indeed the richest school in Singapore. I stayed in PGPR (NUS College Residential Area). The dormitory environment is very good. Each of us has an independent room. I like the window in front of the desk very much. I can clearly see the beautiful scenery outside.<br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/03/17/67d807c5062cc.png"
-                      alt="diskpart view"
-                ><figcaption>diskpart view</figcaption></figure><br>  <figure class="image-caption"><img  
+                     data-src="https://a2.boltp.com/2025/05/03/6815e949979f2.jpg"
+                      alt="PGPR Dorm"
+                ><figcaption>PGPR Dorm</figcaption></figure><br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/03/17/67d807fe71729.png"
-                      alt="diskpart view new"
-                ><figcaption>diskpart view new</figcaption></figure></li>
-<li>linux<br>  <figure class="image-caption"><img  
+                     data-src="https://a2.boltp.com/2025/05/03/6815e949921a2.jpg"
+                      alt="Nice room!"
+                ><figcaption>Nice room!</figcaption></figure><br>However, in terms of infrastructure, I think SUSTech is better, except that I cannot enjoy a single room at SUSTech. By the way, NUS is built on a mountain, and the terrain is very complex. Google Maps is of limited use here because the three-dimensional space is fully utilized.<br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/03/17/67d808e3e7c0c.png"
-                      alt="linux disk"
-                ><figcaption>linux disk</figcaption></figure><br>  <figure class="image-caption"><img  
+                     data-src="https://a2.boltp.com/2025/05/03/6815e94997ea1.jpg"
+                      alt="NUS Mountains"
+                ><figcaption>NUS Mountains</figcaption></figure></p>
+<p>Fortunately, the food here suits my taste very well. This may be related to the large number of Chinese in Singapore. They cook Chinese food even more deliciously than in mainland China, and the price is not expensive, probably similar to that in Shanghai. You can be full for about 30CNY. Hainanese chicken rice is my favorite.</p>
+<p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/03/17/67d8093ee8f61.png"
-                      alt="linux2.png"
-                ><figcaption>linux2.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     data-src="https://a2.boltp.com/2025/05/03/6815e94991c08.jpg"
+                      alt="Breakfast with my friend"
+                ><figcaption>Breakfast with my friend</figcaption></figure></p>
+<p>I am honored to have made three other very, very good friends here. They are all computer science students. Zhengdong has a deep understanding of distributed databases, and Yicheng is a full-stack expert. It is said that Zhengdong will go to the University of Toronto for a research internship soon, and Yicheng wants to go to UC Berkly.</p>
+<p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/03/17/67d8095b23504.png"
-                      alt="linux3.png"
-                ><figcaption>linux3.png</figcaption></figure></li>
-<li>此处磁盘1应该是电脑自带的512G SSD<ul>
-<li>分区1就是ESP</li>
-<li>分区2是Windows系统的保留分区</li>
-<li>分区3是我分卷的C盘</li>
-<li>分区4是我分卷的D盘</li>
-<li>分区5是恢复分区</li>
-</ul>
-</li>
-<li>磁盘2则是我加装的一块1T SSD<ul>
-<li>分区1就是ESP</li>
-<li>分区2就是Windows系统的保留分区</li>
-<li>分区3是我分卷的E盘</li>
-<li>除了恢复分区的剩下的分区被我用来做成了Linux Ubuntu</li>
-</ul>
-</li>
-</ul>
-<h1 id="计算机启动流程"><a href="#计算机启动流程" class="headerlink" title="计算机启动流程"></a>计算机启动流程</h1><h2 id="POST（Power-On-Self-Test）"><a href="#POST（Power-On-Self-Test）" class="headerlink" title="POST（Power-On Self Test）"></a>POST（Power-On Self Test）</h2><p>在计算机打开电源的时候，首先BIOS（old）&#x2F;UEFI(new)会检查硬件是否正常工作</p>
-<h2 id="UEFI"><a href="#UEFI" class="headerlink" title="UEFI"></a>UEFI</h2><p>UEFI初始化后读取引导配置，引导配置数据通常存储在EFI系统分区（EFI System Partition,ESP）中的BCD(Boot Configuration Data)</p>
+                     data-src="https://a2.boltp.com/2025/05/03/6815e94992176.jpg"
+                      alt="Excellent Teammates!"
+                ><figcaption>Excellent Teammates!</figcaption></figure></p>
+<p>During this period, I have been fascinated by the research of K8S. In the past, my research in the field of HPC has always focused on physical machines. This time, I learned that we can easily manage computing resources through containerization and realize excellent cloud-native applications through cloud deployment. Finally, we developed a multi-terminal cloud-native application that can withstand a large number of user loads: GroupUp. The inspiration for developing this application came from the matching problem encountered by everyone when forming a team on the first day of class. The recommendation algorithm is indeed a topic worth studying in the field of computer science. We designed this software to use the recommendation algorithm to provide everyone with the possibility of quickly matching with suitable teammates based on information.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/03/6815e941023be.jpg"
+                      alt="GroupUp Posters"
+                ><figcaption>GroupUp Posters</figcaption></figure></p>
+<p>Of course, the development process is difficult. We have multiple containers to deploy various services to achieve non-stop updates during the development process. We also use K8S’s ingress technology for load balancing and traffic distribution. We try to learn and use many distributed technologies based on cloud native applications, such as Reddis distributed database and RabbitQ message queue. What drives me crazy is that the night before the presentation, the image of RabbitQ queue on Docker Hub had a bug and update. The old image caused the message queue service to crash. I debugged for a long time but didn’t expect that the image of the container itself would have a temporary problem. Fortunately, the presentation process went smoothly.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a2.boltp.com/2025/05/03/6815e94991841.jpg"
+                      alt="Nice Try"
+                ><figcaption>Nice Try</figcaption></figure></p>
+<p>K8S has become the best solution for virtual clusters, and its open source community is also growing. In the field of machine learning, combined with my research expertise, technical models such as KubeFlow and FedKube will become the direction I want to explore in the future.</p>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Study</category>
       </categories>
       <tags>
-        <tag>Disk Storage, Computer Orgnization</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>生命</title>
-    <url>/2024/08/14/poem-life/</url>
-    <content><![CDATA[<p>本想拍<br>晨光中立在路灯上的鸟，<br>我走近，她停住，<br>我停住，她飞远，<br>灵台方寸间容不下活物<br>我想<br>除了路灯外<br>总要有点蹦蹦跳跳的生命</p>
-<p>最心喜的夹竹桃也在冬晨起不来床<br>其实一整日都见不到<br>或许我们都睡着了<br>她才醒<br>除了日月外<br>总要有点蹦蹦跳跳的生命<br>我想</p>
-<p>我坐在椅子上不动<br>想破教室后面的一张红纸<br>他写“于道各努力，千里自同风”<br>我也想这么写<br>但我还得想想<br>罢<br>我写<br>“于热爱中被救赎”</p>
-<p>总有些什么要睡去<br>总有些什么要醒来</p>
-<p>我坐在椅子上不动<br>小胖子坐在我对面<br>蹦蹦跳跳<br>阳光卧在水怀里<br>蹦蹦跳跳</p>
-]]></content>
-      <categories>
-        <category>Self-talking</category>
-      </categories>
-      <tags>
-        <tag>Poem life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My MacBook can’t access the Internet via Campus Network!</title>
-    <url>/2024/08/16/campusnetwork/</url>
-    <content><![CDATA[<p>Today I am energetic and glad to finish my NLP Assignment, but when I tried to connect our campus wifi, something bad happened: no response after clicking CAS(Central Authentication Service). Then I tried to find out what happened and had a review of computer network knowledge. This passage will help thous who have troubles while connecting a WiFi with Captive Portal(usually used in public organization or some shop like Starbucks).</p>
-<h1 id="What-Will-Happen-When-a-MacBook-Connected-to-a-WiFi-with-Captive-Portal"><a href="#What-Will-Happen-When-a-MacBook-Connected-to-a-WiFi-with-Captive-Portal" class="headerlink" title="What Will Happen When a MacBook Connected to a WiFi with Captive Portal"></a>What Will Happen When a MacBook Connected to a WiFi with Captive Portal</h1><p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/04/05/67f073d3245df.png"
-                      alt="image.png"
-                ><figcaption>image.png</figcaption></figure></p>
-<p>package got by wireshark</p>
-<p>The first thing my mac do is to send request to 23.210.41.53(captive.apple.com)</p>
-<div class="highlight-container" data-rel="Jsx"><figure class="iseeu highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="variable constant_">GET</span> /hotspot-detect.<span class="property">html</span></span><br></pre></td></tr></table></figure></div>
-
-<p>Then because of the Captive Authentication setting of our campus router, it will intercept my request to <a class="link"   href="http://captive.apple.com/" >captive.apple.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> and send back a 302 response(redirect to another destination found) which included the IP address of our campus’ Web Authentication Server 172.16.16.20 (for sustechers’ service somehow didn’t open the Web Authentication Window automatically, you can visit the 172.16.16.20 to enter the page). Then our OS detect the unusual redirecting it will open the redirecting window which shown below:</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/04/05/67f073d0bee36.png"
-                      alt="image 1.png"
-                ><figcaption>image 1.png</figcaption></figure></p>
-<h1 id="Global-Local-DNS-Server"><a href="#Global-Local-DNS-Server" class="headerlink" title="Global &#x2F; Local DNS Server"></a>Global &#x2F; Local DNS Server</h1><p>My problem is no response while clicking CAS button, i.e. while sending requests to cas.sustech.edu.cn</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/04/05/67f073d0beeae.png"
-                      alt="image 2.png"
-                ><figcaption>image 2.png</figcaption></figure></p>
-<p>Then the first step I do is to check if the DNS works right</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/04/05/67f073d06e500.png"
-                      alt="image 3.png"
-                ><figcaption>image 3.png</figcaption></figure></p>
-<p>The result shown that the DNS server successfully analysis the domain name but it’s a Non-authoritative answer, because it was given by a global DNS server (most used DNS server in china is 114.114.114.114, other countries may use 8.8.8.8 provided by Google), Then it must can’t reach 116.7.234.12, I verified it using ping.</p>
-<div class="highlight-container" data-rel="Jsx"><figure class="iseeu highlight jsx"><table><tr><td class="code"><pre><span class="line">ping <span class="number">116.7</span><span class="number">.234</span><span class="number">.12</span></span><br></pre></td></tr></table></figure></div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/04/05/67f073d0629b1.png"
-                      alt="image 4.png"
-                ><figcaption>image 4.png</figcaption></figure></p>
-<p>Then I guessed here must existed a local DNS server provided by our campus, so I called the ITS and figured that out, maybe my VPN all something somehow changed my DNS server, it was fixed as 114.114.114.114, but it should be set as automatically detect. </p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/04/05/67f073d080cbd.png"
-                      alt="image 5.png"
-                ><figcaption>image 5.png</figcaption></figure><br>So I delete its fixed DNS and got the automatically detected DNS Server</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/04/05/67f073d0ae300.png"
-                      alt="image 6.png"
-                ><figcaption>image 6.png</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/04/05/67f073d075e92.png"
-                      alt="image 7.png"
-                ><figcaption>image 7.png</figcaption></figure></p>
-<p>The local DNS Server gave the authoritative Address and the problem was solved.</p>
-]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>Computer Network</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Best SC24!</title>
-    <url>/2024/11/18/Travel2SC/</url>
-    <content><![CDATA[<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/6813702d833b4.jpg"
-                      alt="Guess where?"
-                ><figcaption>Guess where?</figcaption></figure></p>
-<p>Guess where I’ve come? Here is SC24 at Atlanta, Georgia, United States!!!<br>It’s really my honor to be invited to be here to attend one of the most famous and TOP Conference in HPC Area: SC(International Conference for High Performance Computing). This year, the conference is held at ATLANTA,GA. And two of my teammates and I are invited to attend the conference and the student cluster competition on behalf of SUSTech.<br><a href="https://a1.boltp.com/2025/05/01/6813702dac956.jpg"><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/6813702dac956.jpg"
-                      alt="SUSTech Team"
-                ><figcaption>SUSTech Team</figcaption></figure></a></p>
-<p>I’ve participated in several of international HPC competitions all around world, but I have to say the SC is the best! The conference is held at the world’s largest conference center GACC. A lot of famous companies, univerisities gathered here.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/681370318355f.jpg"
-                      alt="I hope you could accept my paper..."
-                ><figcaption>I hope you could accept my paper...</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/68137033e809d.jpg"
-                      alt="This computer is armed!"
-                ><figcaption>This computer is armed!</figcaption></figure></p>
-<p>We were very happy to find our seniors when we first arrived here: they were studying for a doctorate at Georgia Tech, which is one of the most famous Tech Universities around the world. As said, they got over 2000 USD salaries! But their majors were mainly robotics engineering and physics. We had a delicious BBQ together. Almost everyone had their own car when they first came to the United States to study for a doctorate. The seniors drove us on the streets at a speed that would definitely get us arrested in China. However, there were too few people in Atlanta, and there were almost no pedestrians on the streets.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/6813702dd353d.jpg"
-                      alt="Georgia Tech seniors&#39; BBQ"
-                ><figcaption>Georgia Tech seniors&#39; BBQ</figcaption></figure></p>
-<p>During the four days of the conference, we were almost always at the competition venue. We started our HPL test on the JetStream cloud cluster and ran the test samples provided by the organizer. In addition to the classic numerical simulation competition questions, the organizer also provided a computer vision competition question announced on the spot: Find Cat. I was busy tuning the target detection model and I doubted for a moment whether I was participating in an HPC competition.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/68137031b918b.jpg"
-                      alt="Work hard!"
-                ><figcaption>Work hard!</figcaption></figure></p>
-<p>Of course, the most important thing to do when attending a conference is to visit the exhibition! I collected a lot of beautiful stickers and pins to decorate my Macbook and backpack.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/68137031ef006.jpg"
-                      alt="SC Stickers"
-                ><figcaption>SC Stickers</figcaption></figure><br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/6813702dbc441.jpg"
-                      alt="Stickers Collector"
-                ><figcaption>Stickers Collector</figcaption></figure><br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/68137034e39e6.jpg"
-                      alt="Nice Backpack!"
-                ><figcaption>Nice Backpack!</figcaption></figure></p>
-<p>I went to many exhibition halls to participate in activities, including Google, Microsoft, NASA, and NVIDIA, and received many souvenirs. I have had many discussions with technology enthusiasts, and we all share the same painful problems in the development process. This will become our topic of conversation. I also found that in the era of artificial intelligence, many server and chip manufacturers have begun to try more efficient cooling and communication technologies, such as chips with larger unified memory (Apple). Traditional air cooling seems to have been eliminated, and the latest Lenovo and Dell servers have adopted full liquid cooling technology.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681475fb8084b.jpg"
-                      alt="Exhibition Presentation"
-                ><figcaption>Exhibition Presentation</figcaption></figure></p>
-<p>I was excited to see Red Hat, which is definitely a pure company in the eyes of geeks, but unfortunately, when I went there, their Red Hat souvenirs had been distributed. I also participated in the OpenMP lottery. I have to say that writing and compiling OpenMP programs is a very painful thing. Even though they set the development language to be very simple, unknown bugs always give people headaches.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681476ef989e9.jpg"
-                      alt="Troublesome OpenMP"
-                ><figcaption>Troublesome OpenMP</figcaption></figure></p>
-<p>In the end, it was Tsinghua University, a well-established Chinese university, that won the championship. I have to say it is very worth learning from.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/68137030ebb62.jpg"
-                      alt="Tsinghua University!"
-                ><figcaption>Tsinghua University!</figcaption></figure><br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/68137030bad58.jpg"
-                      alt="Poster of Tsinghua U"
-                ><figcaption>Poster of Tsinghua U</figcaption></figure></p>
-<p>Although SC does not have the 3000W power consumption limit for building a cluster like ASC, TsingHua U also uses Grafana for real-time power consumption monitoring. The cloud-naive project I developed based on kubernetes at NUS also uses Prometheus based on Grafana for power consumption detection. This real-time visual monitoring is indeed very valuable, because HPC software is likely to get stuck due to various strange problems when running tests. We thought it was successfully run, but in fact the application was stuck in the IO part, the CPU did not run, and the system had almost no power consumption.</p>
-<p>The most important point of HPC application optimization is still to find a good scheduling strategy to overlap communication and computing overhead. Like us, they first used Profiler Tools to profile the application, but I usually only use Intel Vtune Amplifier. According to their experience, NVIDIA Profiling Tools is more effective when executing GPU tasks. In addition, it is crucial to properly rearrange memory to make full use of cache hits. Maybe I will write a blog about the detailed optimization strategy. Honestly speaking, I am quite busy these days.</p>
-<p>The four days in SC are very unforgettable. I think this will be one of the most precious memories in my life. I joined ACM HPC SIG and also left Shenzhen’s mark on the world HPC enthusiasts map. Goodbye SC, I hope that one day I can produce scientific research results that will be accepted by you.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/681370356b123.jpg"
-                      alt="Shenzhen HPC SIG!"
-                ><figcaption>Shenzhen HPC SIG!</figcaption></figure><br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/6813703536ac2.jpg"
-                      alt="Bye SC!"
-                ><figcaption>Bye SC!</figcaption></figure></p>
-]]></content>
-      <categories>
-        <category>Conference</category>
-      </categories>
-      <tags>
-        <tag>SC, America, Atlanta</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Travel to United States!</title>
-    <url>/2024/11/20/Travel2US/</url>
-    <content><![CDATA[<p>Taking the opportunity of participating in SC24, we traveled to this mysterious country on the other side of the earth and experienced the completely different lifestyle, culture and customs.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/6813702d8b753.jpg"
-                      alt="Happy to be SC24!"
-                ><figcaption>Happy to be SC24!</figcaption></figure></p>
-<p>We lived in a house in the downtown. Although it’s reported that it’s really dangerous there(A gunfight may break out),But during the 5 days I was there, everything was very peaceful. </p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/68137035c7909.jpg"
-                      alt="The big house in America!"
-                ><figcaption>The big house in America!</figcaption></figure></p>
-<p>This is a three-story villa with a small garden. We found this homestay on Airbnb. The owners are a Spanish couple. They are very gentle and polite. They rented it to us for 600CNY a night. So my other two classmates and I also experienced the style of living in a big villa. After all, China is the most populous country in the world. Everyone lives in elevator apartment buildings, and there are crowds of people everywhere. As an American city dominated by heavy industry: Atlanta (Atlanta is the birthplace of Coca-Cola), people here live almost like a rural life. People drive to vacation on weekends, and their work is not very busy during the weekdays.</p>
-<p>On the first day at GA, we three Chinese college students, who were on the other side of the earth for the first time, felt extremely curious and confused. The streets here were too empty compared to those in China, and there were almost no people.The prices here are too high. A bowl of noodles that costs only 10 yuan in China costs 120 yuan here.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/681370307a474.jpg"
-                      alt="Empty subway station"
-                ><figcaption>Empty subway station</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/6813702d73bc0.jpg"
-                      alt="120 CNY noodles!"
-                ><figcaption>120 CNY noodles!</figcaption></figure></p>
-<p>It is worth mentioning that Atlanta was once the venue for the Olympic Games. It has the Century Olympic Park and the Mercedes-Benz Stadium. A huge Mercedes-Benz logo is hung on the huge stadium. It is said that the logo is so large that it can be clearly seen on remote sensing satellites!</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/01/6813703597d91.jpg"
-                      alt="Olympic Park"
-                ><figcaption>Olympic Park</figcaption></figure></p>
-<p>On our last day before leaving the United States, since we had to transfer at Los Angeles Airport, we spent a day touring Los Angeles. Compared to Atlanta, this coastal city in California has a more prosperous American style. We took a Delta Airlines flight to Los Angeles, California, which was exactly what I had seen in movies and TV shows. As soon as we got off the plane, we saw the blue sky and the low skyline.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/6814708c3adfd.jpg"
-                      alt="Blue Sky and the skyline in LA"
-                ><figcaption>Blue Sky and the skyline in LA</figcaption></figure></p>
-<p>After storing our luggage, we were hungry and went to the famous IN-N-OUT to eat authentic American fast food. Ordering in the United States is very simple, without fancy names, which is very friendly to me who has difficulty making choices. The cute chef also gave us commemorative hats, which was so cute.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681470d463f48.jpg"
-                      alt="IN-N-OUT"
-                ><figcaption>IN-N-OUT</figcaption></figure><br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681470d462295.jpg"
-                      alt="commemorative hats"
-                ><figcaption>commemorative hats</figcaption></figure></p>
-<p>As college students, we first visited UCLA, the top public university in the United States. This should be an academic sanctuary that countless students dream of, but the high tuition fees in the United States are prohibitive.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681472d835f09.jpg"
-                      alt="No.1 Public Univercity in US: UCLA"
-                ><figcaption>No.1 Public Univercity in US: UCLA</figcaption></figure></p>
-<p>Unlike the low-rise buildings outside, UCLA’s architectural style is full of classical style. </p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/68147122a32b7.jpg"
-                      alt="UCLA Royce Hall"
-                ><figcaption>UCLA Royce Hall</figcaption></figure></p>
-<p>College life in the United States looks completely different from that in China. On sunny afternoons, students are lying on the lawn enjoying the nature and fresh air. Some are having a picnic, some are chatting, and some are sleeping. Everyone looks very relaxed. In China, even in new research universities like SUSTech, everyone is mainly busy with scientific research and studies, and it is rare to see such a sense of relaxation.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681471cf76f1c.jpg"
-                      alt="UCLA Bus Stop"
-                ><figcaption>UCLA Bus Stop</figcaption></figure></p>
-<p>Frankly speaking, the streets of LA are not as beautiful as I imagined, probably because the culture of driving cars is prevalent in the United States, and we walked the whole way. There are few pedestrians on the streets, and there is some garbage. What I hate most is the smell of cigarettes everywhere. As the home of Hollywood, the world-famous film and television base, the famous Walk of Fame is just a narrow road with stars printed on the ground. It turns out that many things will only feel real when you are there in person. But what lies behind this should be the culture of the film and television industry. But to be honest, the movies made by Hollywood in the past two years are really not very good.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681473b628854.jpg"
-                      alt="The famous Star Road of Hollywood"
-                ><figcaption>The famous Star Road of Hollywood</figcaption></figure></p>
-<p>However, this trip was also unforgettable for me, because in the evening we came to the Griffith Observatory, the filming location of one of my favorite movies: La La Land.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681474885f6fe.jpg"
-                      alt="The Gtiffith Observatory"
-                ><figcaption>The Gtiffith Observatory</figcaption></figure></p>
-<p>There is an ancient sundial used for timekeeping here, and the view is very wide. You can see a huge astronomical telescope and the famous Hollywood sign.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681474e0d2672.jpg"
-                      alt="Hollywood"
-                ><figcaption>Hollywood</figcaption></figure><br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681474e0d2672.jpg"
-                      alt="The giant Observor"
-                ><figcaption>The giant Observor</figcaption></figure></p>
-<p>In general, the United States gives me the impression of a city full of primitive wildness, which may be related to their culture of advocating absolute freedom.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a1.boltp.com/2025/05/02/681473bddd0eb.jpg"
-                      alt="Portrait of a satirical politician on the street"
-                ><figcaption>Portrait of a satirical politician on the street</figcaption></figure></p>
-]]></content>
-      <categories>
-        <category>Trvel</category>
-      </categories>
-      <tags>
-        <tag>SC, America, Atlanta</tag>
+        <tag>Singarpore, NUS, Kubernetes</tag>
       </tags>
   </entry>
   <entry>
@@ -842,167 +578,431 @@
       </tags>
   </entry>
   <entry>
-    <title>One of the best HPC Competition around the world-ASC24</title>
-    <url>/2024/04/20/ASC/</url>
+    <title>Travel to United States!</title>
+    <url>/2024/11/20/Travel2US/</url>
+    <content><![CDATA[<p>Taking the opportunity of participating in SC24, we traveled to this mysterious country on the other side of the earth and experienced the completely different lifestyle, culture and customs.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/6813702d8b753.jpg"
+                      alt="Happy to be SC24!"
+                ><figcaption>Happy to be SC24!</figcaption></figure></p>
+<p>We lived in a house in the downtown. Although it’s reported that it’s really dangerous there(A gunfight may break out),But during the 5 days I was there, everything was very peaceful. </p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/68137035c7909.jpg"
+                      alt="The big house in America!"
+                ><figcaption>The big house in America!</figcaption></figure></p>
+<p>This is a three-story villa with a small garden. We found this homestay on Airbnb. The owners are a Spanish couple. They are very gentle and polite. They rented it to us for 600CNY a night. So my other two classmates and I also experienced the style of living in a big villa. After all, China is the most populous country in the world. Everyone lives in elevator apartment buildings, and there are crowds of people everywhere. As an American city dominated by heavy industry: Atlanta (Atlanta is the birthplace of Coca-Cola), people here live almost like a rural life. People drive to vacation on weekends, and their work is not very busy during the weekdays.</p>
+<p>On the first day at GA, we three Chinese college students, who were on the other side of the earth for the first time, felt extremely curious and confused. The streets here were too empty compared to those in China, and there were almost no people.The prices here are too high. A bowl of noodles that costs only 10 yuan in China costs 120 yuan here.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/681370307a474.jpg"
+                      alt="Empty subway station"
+                ><figcaption>Empty subway station</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/6813702d73bc0.jpg"
+                      alt="120 CNY noodles!"
+                ><figcaption>120 CNY noodles!</figcaption></figure></p>
+<p>It is worth mentioning that Atlanta was once the venue for the Olympic Games. It has the Century Olympic Park and the Mercedes-Benz Stadium. A huge Mercedes-Benz logo is hung on the huge stadium. It is said that the logo is so large that it can be clearly seen on remote sensing satellites!</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/6813703597d91.jpg"
+                      alt="Olympic Park"
+                ><figcaption>Olympic Park</figcaption></figure></p>
+<p>On our last day before leaving the United States, since we had to transfer at Los Angeles Airport, we spent a day touring Los Angeles. Compared to Atlanta, this coastal city in California has a more prosperous American style. We took a Delta Airlines flight to Los Angeles, California, which was exactly what I had seen in movies and TV shows. As soon as we got off the plane, we saw the blue sky and the low skyline.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/6814708c3adfd.jpg"
+                      alt="Blue Sky and the skyline in LA"
+                ><figcaption>Blue Sky and the skyline in LA</figcaption></figure></p>
+<p>After storing our luggage, we were hungry and went to the famous IN-N-OUT to eat authentic American fast food. Ordering in the United States is very simple, without fancy names, which is very friendly to me who has difficulty making choices. The cute chef also gave us commemorative hats, which was so cute.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681470d463f48.jpg"
+                      alt="IN-N-OUT"
+                ><figcaption>IN-N-OUT</figcaption></figure><br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681470d462295.jpg"
+                      alt="commemorative hats"
+                ><figcaption>commemorative hats</figcaption></figure></p>
+<p>As college students, we first visited UCLA, the top public university in the United States. This should be an academic sanctuary that countless students dream of, but the high tuition fees in the United States are prohibitive.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681472d835f09.jpg"
+                      alt="No.1 Public Univercity in US: UCLA"
+                ><figcaption>No.1 Public Univercity in US: UCLA</figcaption></figure></p>
+<p>Unlike the low-rise buildings outside, UCLA’s architectural style is full of classical style. </p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/68147122a32b7.jpg"
+                      alt="UCLA Royce Hall"
+                ><figcaption>UCLA Royce Hall</figcaption></figure></p>
+<p>College life in the United States looks completely different from that in China. On sunny afternoons, students are lying on the lawn enjoying the nature and fresh air. Some are having a picnic, some are chatting, and some are sleeping. Everyone looks very relaxed. In China, even in new research universities like SUSTech, everyone is mainly busy with scientific research and studies, and it is rare to see such a sense of relaxation.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681471cf76f1c.jpg"
+                      alt="UCLA Bus Stop"
+                ><figcaption>UCLA Bus Stop</figcaption></figure></p>
+<p>Frankly speaking, the streets of LA are not as beautiful as I imagined, probably because the culture of driving cars is prevalent in the United States, and we walked the whole way. There are few pedestrians on the streets, and there is some garbage. What I hate most is the smell of cigarettes everywhere. As the home of Hollywood, the world-famous film and television base, the famous Walk of Fame is just a narrow road with stars printed on the ground. It turns out that many things will only feel real when you are there in person. But what lies behind this should be the culture of the film and television industry. But to be honest, the movies made by Hollywood in the past two years are really not very good.</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681473b628854.jpg"
+                      alt="The famous Star Road of Hollywood"
+                ><figcaption>The famous Star Road of Hollywood</figcaption></figure></p>
+<p>However, this trip was also unforgettable for me, because in the evening we came to the Griffith Observatory, the filming location of one of my favorite movies: La La Land.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681474885f6fe.jpg"
+                      alt="The Gtiffith Observatory"
+                ><figcaption>The Gtiffith Observatory</figcaption></figure></p>
+<p>There is an ancient sundial used for timekeeping here, and the view is very wide. You can see a huge astronomical telescope and the famous Hollywood sign.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681474e0d2672.jpg"
+                      alt="Hollywood"
+                ><figcaption>Hollywood</figcaption></figure><br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681474e0d2672.jpg"
+                      alt="The giant Observor"
+                ><figcaption>The giant Observor</figcaption></figure></p>
+<p>In general, the United States gives me the impression of a city full of primitive wildness, which may be related to their culture of advocating absolute freedom.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681473bddd0eb.jpg"
+                      alt="Portrait of a satirical politician on the street"
+                ><figcaption>Portrait of a satirical politician on the street</figcaption></figure></p>
+]]></content>
+      <categories>
+        <category>Trvel</category>
+      </categories>
+      <tags>
+        <tag>SC, America, Atlanta</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The Best SC24!</title>
+    <url>/2024/11/18/Travel2SC/</url>
     <content><![CDATA[<p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a143a164e.jpg"
-                      alt="SUSTech ASC Team"
-                ><figcaption>SUSTech ASC Team</figcaption></figure><br>ASC is one of the three major supercomputing competitions in the world, along with SC and ISC. ASC organizers are usually from a top university in China. We at SUSTech have also hosted ASC22-23. ASC not only requires us to install drivers and OS from bare metal to build a high-performance computing cluster with multiple machines connected, but also requires us to run HPC software on our own supercomputing cluster under limited power consumption and pass test samples. This is a highly comprehensive challenge.</p>
-<p>After nearly half a year of careful preparation, we finally learned that the proposal we submitted in the preliminary round passed the assessment of the competition committee. We will go to Shanghai to compete in the live finals with 20 university teams from all over the world.<br><figure class="image-caption"><img  
+                     data-src="https://a1.boltp.com/2025/05/01/6813702d833b4.jpg"
+                      alt="Guess where?"
+                ><figcaption>Guess where?</figcaption></figure></p>
+<p>Guess where I’ve come? Here is SC24 at Atlanta, Georgia, United States!!!<br>It’s really my honor to be invited to be here to attend one of the most famous and TOP Conference in HPC Area: SC(International Conference for High Performance Computing). This year, the conference is held at ATLANTA,GA. And two of my teammates and I are invited to attend the conference and the student cluster competition on behalf of SUSTech.<br><a href="https://a1.boltp.com/2025/05/01/6813702dac956.jpg"><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a143a1800.jpg"
-                      alt="Proposal of SUSTech Team"
-                ><figcaption>Proposal of SUSTech Team</figcaption></figure></p>
-<p>The first day’s schedule was mainly about setting up the machines. We installed the eight NVIDIA A100 graphics cards we brought with us on four of the machines, and then began to configure the operating system for each machine.</p>
+                     data-src="https://a1.boltp.com/2025/05/01/6813702dac956.jpg"
+                      alt="SUSTech Team"
+                ><figcaption>SUSTech Team</figcaption></figure></a></p>
+<p>I’ve participated in several of international HPC competitions all around world, but I have to say the SC is the best! The conference is held at the world’s largest conference center GACC. A lot of famous companies, univerisities gathered here.</p>
 <p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a14de7d83.jpg"
-                      alt="Configuring OS"
-                ><figcaption>Configuring OS</figcaption></figure></p>
-<p>We chose UBUNTU 22.04 as the operating system, but found that other teams mostly used Red Hat operating systems. Later we learned that Debian operating systems sacrificed some communication performance in pursuit of user experience. However, we did not prepare a system disk for the Red Hat operating system at the time, so we had to bite the bullet and go for it.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a14de79b6.jpg"
-                      alt="BIOS which is not common to see nowadays"
-                ><figcaption>BIOS which is not common to see nowadays</figcaption></figure></p>
-<p>To be honest, it took us a lot of effort to configure this four-machine, eight-card HPC cluster. It was a very difficult journey, especially the network communication problem between the four machines. For some reason, our IB network cable was not detected by the IB driver, and a GPU on host No. 3 was not recognized. If the IB network is not configured properly, the Ethernet-based communication method will greatly increase the communication overhead across nodes.</p>
+                     data-src="https://a1.boltp.com/2025/05/01/681370318355f.jpg"
+                      alt="I hope you could accept my paper..."
+                ><figcaption>I hope you could accept my paper...</figcaption></figure></p>
 <p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a144cd99f.jpg"
-                      alt="Can you believe how expensive this InfiniBand cable is?"
-                ><figcaption>Can you believe how expensive this InfiniBand cable is?</figcaption></figure></p>
-<p>We could only reinstall the IB driver and set the IP permissions between nodes. The GPU was found to be not correctly identified because the PLIE slot was loose. This was a very tense day, but fortunately we finally succeeded in getting our cluster up and running and started running HPL tests. The ASC competition has a power consumption limit of 3kW, but the new generation of Intel CPUs installed on the servers seem to have extremely high no-load power consumption, so everyone’s power consumption exceeded the limit on the first day of testing.</p>
+                     data-src="https://a1.boltp.com/2025/05/01/68137033e809d.jpg"
+                      alt="This computer is armed!"
+                ><figcaption>This computer is armed!</figcaption></figure></p>
+<p>We were very happy to find our seniors when we first arrived here: they were studying for a doctorate at Georgia Tech, which is one of the most famous Tech Universities around the world. As said, they got over 2000 USD salaries! But their majors were mainly robotics engineering and physics. We had a delicious BBQ together. Almost everyone had their own car when they first came to the United States to study for a doctorate. The seniors drove us on the streets at a speed that would definitely get us arrested in China. However, there were too few people in Atlanta, and there were almost no pedestrians on the streets.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/6813702dd353d.jpg"
+                      alt="Georgia Tech seniors&#39; BBQ"
+                ><figcaption>Georgia Tech seniors&#39; BBQ</figcaption></figure></p>
+<p>During the four days of the conference, we were almost always at the competition venue. We started our HPL test on the JetStream cloud cluster and ran the test samples provided by the organizer. In addition to the classic numerical simulation competition questions, the organizer also provided a computer vision competition question announced on the spot: Find Cat. I was busy tuning the target detection model and I doubted for a moment whether I was participating in an HPC competition.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/68137031b918b.jpg"
+                      alt="Work hard!"
+                ><figcaption>Work hard!</figcaption></figure></p>
+<p>Of course, the most important thing to do when attending a conference is to visit the exhibition! I collected a lot of beautiful stickers and pins to decorate my Macbook and backpack.</p>
 <p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a202ea952.jpg"
-                      alt="Power Limit Warning"
-                ><figcaption>Power Limit Warning</figcaption></figure></p>
-<p>In the next few days of the competition, we began to run the test samples according to the established plan. The actual test samples issued in the competition were much larger than the reference samples, and it really required good time planning to complete them within the limited time. In the two competition questions I was responsible for, openCAEPoro and GOMARS, openCAEPoro showed a lot of small matrix multiplications during operation, which brought unnecessary communication waiting overhead. We used local memory rearrangement and specific small matrix multiplication libraries for optimization. GOMARS had many strange errors during on-site compilation. I don’t know why it can run smoothly on a single node but will run empty when running on multiple nodes. There should be problems in the MPI communication layer. But in the end, due to lack of time, we only submitted the results of a single node.</p>
+                     data-src="https://a1.boltp.com/2025/05/01/68137031ef006.jpg"
+                      alt="SC Stickers"
+                ><figcaption>SC Stickers</figcaption></figure><br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/6813702dbc441.jpg"
+                      alt="Stickers Collector"
+                ><figcaption>Stickers Collector</figcaption></figure><br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/68137034e39e6.jpg"
+                      alt="Nice Backpack!"
+                ><figcaption>Nice Backpack!</figcaption></figure></p>
+<p>I went to many exhibition halls to participate in activities, including Google, Microsoft, NASA, and NVIDIA, and received many souvenirs. I have had many discussions with technology enthusiasts, and we all share the same painful problems in the development process. This will become our topic of conversation. I also found that in the era of artificial intelligence, many server and chip manufacturers have begun to try more efficient cooling and communication technologies, such as chips with larger unified memory (Apple). Traditional air cooling seems to have been eliminated, and the latest Lenovo and Dell servers have adopted full liquid cooling technology.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681475fb8084b.jpg"
+                      alt="Exhibition Presentation"
+                ><figcaption>Exhibition Presentation</figcaption></figure></p>
+<p>I was excited to see Red Hat, which is definitely a pure company in the eyes of geeks, but unfortunately, when I went there, their Red Hat souvenirs had been distributed. I also participated in the OpenMP lottery. I have to say that writing and compiling OpenMP programs is a very painful thing. Even though they set the development language to be very simple, unknown bugs always give people headaches.<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/02/681476ef989e9.jpg"
+                      alt="Troublesome OpenMP"
+                ><figcaption>Troublesome OpenMP</figcaption></figure></p>
+<p>In the end, it was Tsinghua University, a well-established Chinese university, that won the championship. I have to say it is very worth learning from.</p>
 <p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a143a1b70.jpg"
-                      alt="On-site testing"
-                ><figcaption>On-site testing</figcaption></figure></p>
-<p>In the tense competition, although we did not have outstanding performance in a single question, our overall result was good, so we finally won the first prize and the best team award.</p>
+                     data-src="https://a1.boltp.com/2025/05/01/68137030ebb62.jpg"
+                      alt="Tsinghua University!"
+                ><figcaption>Tsinghua University!</figcaption></figure><br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/05/01/68137030bad58.jpg"
+                      alt="Poster of Tsinghua U"
+                ><figcaption>Poster of Tsinghua U</figcaption></figure></p>
+<p>Although SC does not have the 3000W power consumption limit for building a cluster like ASC, TsingHua U also uses Grafana for real-time power consumption monitoring. The cloud-naive project I developed based on kubernetes at NUS also uses Prometheus based on Grafana for power consumption detection. This real-time visual monitoring is indeed very valuable, because HPC software is likely to get stuck due to various strange problems when running tests. We thought it was successfully run, but in fact the application was stuck in the IO part, the CPU did not run, and the system had almost no power consumption.</p>
+<p>The most important point of HPC application optimization is still to find a good scheduling strategy to overlap communication and computing overhead. Like us, they first used Profiler Tools to profile the application, but I usually only use Intel Vtune Amplifier. According to their experience, NVIDIA Profiling Tools is more effective when executing GPU tasks. In addition, it is crucial to properly rearrange memory to make full use of cache hits. Maybe I will write a blog about the detailed optimization strategy. Honestly speaking, I am quite busy these days.</p>
+<p>The four days in SC are very unforgettable. I think this will be one of the most precious memories in my life. I joined ACM HPC SIG and also left Shenzhen’s mark on the world HPC enthusiasts map. Goodbye SC, I hope that one day I can produce scientific research results that will be accepted by you.</p>
 <p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a14de763f.jpg"
-                      alt="First Prize!"
-                ><figcaption>First Prize!</figcaption></figure></p>
-<p>In addition to the competition, the most enjoyable thing is to make friends with HPC enthusiasts from all over the world. We and the team from Shanghai University, Hong Kong Polytechnic University, and Qilu University of Technology won the first place in the team competition.</p>
-<p><figure class="image-caption"><img  
+                     data-src="https://a1.boltp.com/2025/05/01/681370356b123.jpg"
+                      alt="Shenzhen HPC SIG!"
+                ><figcaption>Shenzhen HPC SIG!</figcaption></figure><br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a1440d5ba.jpg"
-                      alt="We are group competition winner!"
-                ><figcaption>We are group competition winner!</figcaption></figure></p>
-<p>It is worth mentioning that I also made good friends from the University of Nuremberg in Germany.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a220b11b1.jpg"
-                      alt="Friends from Germany"
-                ><figcaption>Friends from Germany</figcaption></figure></p>
-<p>The most exciting thing was that Professor Jack Dongarra, Turing Award winner, founder of HPL, and initiator of the TOP500 HPC cluster, also came to the scene and took a photo with us. The last time I met a Turing machine winner was Professor Joseph Sifakis at the Sifakis Institute for Trusted Autonomy at SUSTech. Of course, I was closer to Professor Dongarra this time.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a14308c7f.jpg"
-                      alt="Photo with Prof.Jack Dongarra!"
-                ><figcaption>Photo with Prof.Jack Dongarra!</figcaption></figure></p>
-<p>Of course, we can’t forget our old friends, the team from National Tsing Hua University in Taiwan. Their leader, Prof. Jerry Chou, also came to the scene. I have been listening to Prof. Chou’s open courses online, including parallel programming and operating systems. This time I also met him in person.</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a143a1940.jpg"
-                      alt="Prof. Jerry Chou"
-                ><figcaption>Prof. Jerry Chou</figcaption></figure></p>
-<p>The strength of the National Tsinghua Supercomputing Team in Taiwan is very strong. They have won the ASC championship. We met them in Sydney some time ago. It was a pleasure to communicate with them. They also gave us a treasure that is said to be often used by developers at TSMC and NVIDIA:GUAIGUAI(A snack whose name means obedient and submissive. It is said that if you put it on the server, the server will run well.)</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a143a19d2.jpg"
-                      alt="National Tsinghua U Team with us!"
-                ><figcaption>National Tsinghua U Team with us!</figcaption></figure><br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/02/6814a14de5770.jpg"
-                      alt="Treasure from National Tsinghua U"
-                ><figcaption>Treasure from National Tsinghua U</figcaption></figure></p>
+                     data-src="https://a1.boltp.com/2025/05/01/6813703536ac2.jpg"
+                      alt="Bye SC!"
+                ><figcaption>Bye SC!</figcaption></figure></p>
 ]]></content>
       <categories>
         <category>Conference</category>
       </categories>
       <tags>
-        <tag>ASC, China, Shanghai</tag>
+        <tag>SC, America, Atlanta</tag>
       </tags>
   </entry>
   <entry>
-    <title>Studying at the best Universitie in Singapore-NUS</title>
-    <url>/2024/08/02/NUS/</url>
-    <content><![CDATA[<p>I am very honored to have passed the selection process and joined NUS this summer to learn about cloud computing from Professor Richard TB Ma.<br><figure class="image-caption"><img  
+    <title>My MacBook can’t access the Internet via Campus Network!</title>
+    <url>/2024/08/16/campusnetwork/</url>
+    <content><![CDATA[<p>Today I am energetic and glad to finish my NLP Assignment, but when I tried to connect our campus wifi, something bad happened: no response after clicking CAS(Central Authentication Service). Then I tried to find out what happened and had a review of computer network knowledge. This passage will help thous who have troubles while connecting a WiFi with Captive Portal(usually used in public organization or some shop like Starbucks).</p>
+<h1 id="What-Will-Happen-When-a-MacBook-Connected-to-a-WiFi-with-Captive-Portal"><a href="#What-Will-Happen-When-a-MacBook-Connected-to-a-WiFi-with-Captive-Portal" class="headerlink" title="What Will Happen When a MacBook Connected to a WiFi with Captive Portal"></a>What Will Happen When a MacBook Connected to a WiFi with Captive Portal</h1><p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/03/6815e8b1d70ac.jpg"
-                      alt="Prof.Richard TB Ma @ NUS"
-                ><figcaption>Prof.Richard TB Ma @ NUS</figcaption></figure><br>NUS is indeed the richest school in Singapore. I stayed in PGPR (NUS College Residential Area). The dormitory environment is very good. Each of us has an independent room. I like the window in front of the desk very much. I can clearly see the beautiful scenery outside.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/03/6815e949979f2.jpg"
-                      alt="PGPR Dorm"
-                ><figcaption>PGPR Dorm</figcaption></figure><br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/03/6815e949921a2.jpg"
-                      alt="Nice room!"
-                ><figcaption>Nice room!</figcaption></figure><br>However, in terms of infrastructure, I think SUSTech is better, except that I cannot enjoy a single room at SUSTech. By the way, NUS is built on a mountain, and the terrain is very complex. Google Maps is of limited use here because the three-dimensional space is fully utilized.<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/03/6815e94997ea1.jpg"
-                      alt="NUS Mountains"
-                ><figcaption>NUS Mountains</figcaption></figure></p>
-<p>Fortunately, the food here suits my taste very well. This may be related to the large number of Chinese in Singapore. They cook Chinese food even more deliciously than in mainland China, and the price is not expensive, probably similar to that in Shanghai. You can be full for about 30CNY. Hainanese chicken rice is my favorite.</p>
+                     data-src="https://a1.boltp.com/2025/04/05/67f073d3245df.png"
+                      alt="image.png"
+                ><figcaption>image.png</figcaption></figure></p>
+<p>package got by wireshark</p>
+<p>The first thing my mac do is to send request to 23.210.41.53(captive.apple.com)</p>
+<div class="highlight-container" data-rel="Jsx"><figure class="iseeu highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="variable constant_">GET</span> /hotspot-detect.<span class="property">html</span></span><br></pre></td></tr></table></figure></div>
+
+<p>Then because of the Captive Authentication setting of our campus router, it will intercept my request to <a class="link"   href="http://captive.apple.com/" >captive.apple.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> and send back a 302 response(redirect to another destination found) which included the IP address of our campus’ Web Authentication Server 172.16.16.20 (for sustechers’ service somehow didn’t open the Web Authentication Window automatically, you can visit the 172.16.16.20 to enter the page). Then our OS detect the unusual redirecting it will open the redirecting window which shown below:</p>
 <p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/03/6815e94991c08.jpg"
-                      alt="Breakfast with my friend"
-                ><figcaption>Breakfast with my friend</figcaption></figure></p>
-<p>I am honored to have made three other very, very good friends here. They are all computer science students. Zhengdong has a deep understanding of distributed databases, and Yicheng is a full-stack expert. It is said that Zhengdong will go to the University of Toronto for a research internship soon, and Yicheng wants to go to UC Berkly.</p>
+                     data-src="https://a1.boltp.com/2025/04/05/67f073d0bee36.png"
+                      alt="image 1.png"
+                ><figcaption>image 1.png</figcaption></figure></p>
+<h1 id="Global-Local-DNS-Server"><a href="#Global-Local-DNS-Server" class="headerlink" title="Global &#x2F; Local DNS Server"></a>Global &#x2F; Local DNS Server</h1><p>My problem is no response while clicking CAS button, i.e. while sending requests to cas.sustech.edu.cn</p>
 <p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/03/6815e94992176.jpg"
-                      alt="Excellent Teammates!"
-                ><figcaption>Excellent Teammates!</figcaption></figure></p>
-<p>During this period, I have been fascinated by the research of K8S. In the past, my research in the field of HPC has always focused on physical machines. This time, I learned that we can easily manage computing resources through containerization and realize excellent cloud-native applications through cloud deployment. Finally, we developed a multi-terminal cloud-native application that can withstand a large number of user loads: GroupUp. The inspiration for developing this application came from the matching problem encountered by everyone when forming a team on the first day of class. The recommendation algorithm is indeed a topic worth studying in the field of computer science. We designed this software to use the recommendation algorithm to provide everyone with the possibility of quickly matching with suitable teammates based on information.</p>
+                     data-src="https://a1.boltp.com/2025/04/05/67f073d0beeae.png"
+                      alt="image 2.png"
+                ><figcaption>image 2.png</figcaption></figure></p>
+<p>Then the first step I do is to check if the DNS works right</p>
 <p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/03/6815e941023be.jpg"
-                      alt="GroupUp Posters"
-                ><figcaption>GroupUp Posters</figcaption></figure></p>
-<p>Of course, the development process is difficult. We have multiple containers to deploy various services to achieve non-stop updates during the development process. We also use K8S’s ingress technology for load balancing and traffic distribution. We try to learn and use many distributed technologies based on cloud native applications, such as Reddis distributed database and RabbitQ message queue. What drives me crazy is that the night before the presentation, the image of RabbitQ queue on Docker Hub had a bug and update. The old image caused the message queue service to crash. I debugged for a long time but didn’t expect that the image of the container itself would have a temporary problem. Fortunately, the presentation process went smoothly.</p>
+                     data-src="https://a1.boltp.com/2025/04/05/67f073d06e500.png"
+                      alt="image 3.png"
+                ><figcaption>image 3.png</figcaption></figure></p>
+<p>The result shown that the DNS server successfully analysis the domain name but it’s a Non-authoritative answer, because it was given by a global DNS server (most used DNS server in china is 114.114.114.114, other countries may use 8.8.8.8 provided by Google), Then it must can’t reach 116.7.234.12, I verified it using ping.</p>
+<div class="highlight-container" data-rel="Jsx"><figure class="iseeu highlight jsx"><table><tr><td class="code"><pre><span class="line">ping <span class="number">116.7</span><span class="number">.234</span><span class="number">.12</span></span><br></pre></td></tr></table></figure></div>
+
 <p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://a2.boltp.com/2025/05/03/6815e94991841.jpg"
-                      alt="Nice Try"
-                ><figcaption>Nice Try</figcaption></figure></p>
-<p>K8S has become the best solution for virtual clusters, and its open source community is also growing. In the field of machine learning, combined with my research expertise, technical models such as KubeFlow and FedKube will become the direction I want to explore in the future.</p>
+                     data-src="https://a1.boltp.com/2025/04/05/67f073d0629b1.png"
+                      alt="image 4.png"
+                ><figcaption>image 4.png</figcaption></figure></p>
+<p>Then I guessed here must existed a local DNS server provided by our campus, so I called the ITS and figured that out, maybe my VPN all something somehow changed my DNS server, it was fixed as 114.114.114.114, but it should be set as automatically detect. </p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/04/05/67f073d080cbd.png"
+                      alt="image 5.png"
+                ><figcaption>image 5.png</figcaption></figure><br>So I delete its fixed DNS and got the automatically detected DNS Server</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/04/05/67f073d0ae300.png"
+                      alt="image 6.png"
+                ><figcaption>image 6.png</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/04/05/67f073d075e92.png"
+                      alt="image 7.png"
+                ><figcaption>image 7.png</figcaption></figure></p>
+<p>The local DNS Server gave the authoritative Address and the problem was solved.</p>
 ]]></content>
       <categories>
-        <category>Study</category>
+        <category>Technology</category>
       </categories>
       <tags>
-        <tag>Singarpore, NUS, Kubernetes</tag>
+        <tag>Computer Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>What is in the Disk Storage</title>
+    <url>/2023/08/15/disk/</url>
+    <content><![CDATA[<p>由于今天先启动了一下ubuntu系统，再启动windows系统时出现问题导致无法正常启动，最后了解到是由于我加装一块硬盘导致系统启动引导分区出现迁移（万恶的windows自动更新）遂写此篇</p>
+<h1 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h1><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>分区（Partition）</th>
+<th>分卷（Volume）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>定义</td>
+<td>物理磁盘上的实际划分，用于管理磁盘的物理存储空间</td>
+<td>逻辑上的存储单元，用于操作系统层面的存储管理</td>
+</tr>
+<tr>
+<td>实现层次</td>
+<td>硬件层次</td>
+<td>操作系统层次</td>
+</tr>
+<tr>
+<td>组成</td>
+<td>一个连续的物理磁盘区域</td>
+<td>可以由一个或多个分区组成，可能跨多个物理磁盘</td>
+</tr>
+<tr>
+<td>数量限制</td>
+<td>MBR最多4个主分区，GPT支持更多</td>
+<td>由操作系统和卷管理器决定，通常没有硬性限制</td>
+</tr>
+<tr>
+<td>管理方式</td>
+<td>分区表（MBR、GPT）</td>
+<td>文件系统、卷管理器（如Windows动态卷、Linux LVM）</td>
+</tr>
+<tr>
+<td>示例</td>
+<td>磁盘分区C:、D:、E:</td>
+<td>LVM卷组中的逻辑卷、Windows动态卷</td>
+</tr>
+</tbody></table>
+<h2 id="GPT（GUID-Partition-Table）"><a href="#GPT（GUID-Partition-Table）" class="headerlink" title="GPT（GUID Partition Table）"></a>GPT（GUID Partition Table）</h2><h3 id="GUID-Globally-Unique-Identifier"><a href="#GUID-Globally-Unique-Identifier" class="headerlink" title="GUID(Globally Unique Identifier)"></a>GUID(Globally Unique Identifier)</h3><p>GUID 用于确保每个分区的唯一标识</p>
+<h3 id="Structure-of-GPT"><a href="#Structure-of-GPT" class="headerlink" title="Structure of GPT"></a>Structure of GPT</h3><ul>
+<li><strong>保护MBR（Protective MBR）</strong>：位于磁盘的第一个扇区，保护GPT磁盘不会被旧的MBR工具误识别为未分区磁盘。</li>
+<li><strong>GPT头部（Primary GPT Header）</strong>：位于保护MBR之后，包含GPT的全局信息和主分区表的位置。</li>
+<li><strong>分区条目数组（Partition Entry Array）</strong>：包含所有分区条目，每个条目128字节。通常系统允许多达128个分区。</li>
+<li><strong>备份GPT头部和分区条目数组（Backup GPT Header and Partition Entry Array）</strong>：位于磁盘末尾，用于冗余和恢复。</li>
+</ul>
+<p>以我的电脑为例</p>
+<ul>
+<li>磁盘管理界面<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d8070b46160.png"
+                      alt="disk management view"
+                ><figcaption>disk management view</figcaption></figure></li>
+<li>diskpart界面<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d807c5062cc.png"
+                      alt="diskpart view"
+                ><figcaption>diskpart view</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d807fe71729.png"
+                      alt="diskpart view new"
+                ><figcaption>diskpart view new</figcaption></figure></li>
+<li>linux<br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d808e3e7c0c.png"
+                      alt="linux disk"
+                ><figcaption>linux disk</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d8093ee8f61.png"
+                      alt="linux2.png"
+                ><figcaption>linux2.png</figcaption></figure><br>  <figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://a1.boltp.com/2025/03/17/67d8095b23504.png"
+                      alt="linux3.png"
+                ><figcaption>linux3.png</figcaption></figure></li>
+<li>此处磁盘1应该是电脑自带的512G SSD<ul>
+<li>分区1就是ESP</li>
+<li>分区2是Windows系统的保留分区</li>
+<li>分区3是我分卷的C盘</li>
+<li>分区4是我分卷的D盘</li>
+<li>分区5是恢复分区</li>
+</ul>
+</li>
+<li>磁盘2则是我加装的一块1T SSD<ul>
+<li>分区1就是ESP</li>
+<li>分区2就是Windows系统的保留分区</li>
+<li>分区3是我分卷的E盘</li>
+<li>除了恢复分区的剩下的分区被我用来做成了Linux Ubuntu</li>
+</ul>
+</li>
+</ul>
+<h1 id="计算机启动流程"><a href="#计算机启动流程" class="headerlink" title="计算机启动流程"></a>计算机启动流程</h1><h2 id="POST（Power-On-Self-Test）"><a href="#POST（Power-On-Self-Test）" class="headerlink" title="POST（Power-On Self Test）"></a>POST（Power-On Self Test）</h2><p>在计算机打开电源的时候，首先BIOS（old）&#x2F;UEFI(new)会检查硬件是否正常工作</p>
+<h2 id="UEFI"><a href="#UEFI" class="headerlink" title="UEFI"></a>UEFI</h2><p>UEFI初始化后读取引导配置，引导配置数据通常存储在EFI系统分区（EFI System Partition,ESP）中的BCD(Boot Configuration Data)</p>
+]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Disk Storage, Computer Orgnization</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/08/12/hello-world/</url>
+    <content><![CDATA[<p>Hi, there! Welcome to Dylan Liu’s Blog.</p>
+<p>I used to use Notion to record my research work and WeChat to record my life and technical experience, but many foreign friends have difficulty accessing these contents. As a student who wants to go out into the world, I need a broader platform to show myself and find like-minded friends, so I developed this website to share my experiences, technical experience and insights, and I am currently migrating the content. Welcome everyone to communicate.</p>
+<p>My Chinese Name is HEMU LIU, I am a junior student studying at <a class="link"   href="https://www.sustech.edu.cn/" >SUSTech <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>, Shenzhen, China.<br>I have a strong research interest in HPC &amp; AI, especially the joint training and generalization performance improvement of multimodal large models on large-scale distributed systems. Two years ago, I joined the <a class="link"   href="https://www.imed-lab.com/" >iMED <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> team led by Professor <a class="link"   href="https://www.sustech.edu.cn/en/faculties/liujiang.html" >Liu Jiang <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> (focusing on artificial intelligence in ophthalmology). In iMED, I have been working on improving the generalization performance of models in the field of medical imaging, especially focusing on fine-tuning based on large models. Recently, I would like to combine the characteristics of federated learning to protect medical data privacy and make the best use of computing resources and data sets to train and tune large-scale models.</p>
+<p>In order to further understand the large-scale distributed computing clusters used for training and deploying models, I participated in many internationally renowned HPC competitions and achieved excellent results and attend many national conference like SC24,Atlanta, SCA24, Sydney etc.(Specific awards will be listed in the CV shown below). In the competition, I mainly focused on MPI process communication optimization and openMP thread communication optimization, as well as optimization based on specific processor instruction set architecture. These experiences have given me a deeper understanding of computer architecture. This understanding also helps me in my research on deep learning algorithms. During the summer vacation of 2024, I also went to <a class="link"   href="https://nus.edu.sg/" >NUS <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> to learn technical knowledge of cloud computing and Kubernetes from <a class="link"   href="https://www.comp.nus.edu.sg/cs/people/tbma/" >Prof.Richard TB Ma <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>, which enriched my experience in deploying distributed applications on the cloud. An artificial intelligence project that can be stably used by users is a good work.</p>
+<p>I am preparing to apply for my postgraduate study opportunities recently, hoping to further carry out research work with like-minded friends and make my own contribution to technological development from the perspectives of science and engineering. You are very welcome to contact me through the contact information on the homepage.</p>
+<div style="position: relative; width: 100%; padding-top: 141.42%; /* A4纸比例为210mm:297mm ≈ 1:1.4142 */">
+  <iframe src="/personal_cv.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+</div>
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>生命</title>
+    <url>/2024/08/14/poem-life/</url>
+    <content><![CDATA[<p>本想拍<br>晨光中立在路灯上的鸟，<br>我走近，她停住，<br>我停住，她飞远，<br>灵台方寸间容不下活物<br>我想<br>除了路灯外<br>总要有点蹦蹦跳跳的生命</p>
+<p>最心喜的夹竹桃也在冬晨起不来床<br>其实一整日都见不到<br>或许我们都睡着了<br>她才醒<br>除了日月外<br>总要有点蹦蹦跳跳的生命<br>我想</p>
+<p>我坐在椅子上不动<br>想破教室后面的一张红纸<br>他写“于道各努力，千里自同风”<br>我也想这么写<br>但我还得想想<br>罢<br>我写<br>“于热爱中被救赎”</p>
+<p>总有些什么要睡去<br>总有些什么要醒来</p>
+<p>我坐在椅子上不动<br>小胖子坐在我对面<br>蹦蹦跳跳<br>阳光卧在水怀里<br>蹦蹦跳跳</p>
+]]></content>
+      <categories>
+        <category>Self-talking</category>
+      </categories>
+      <tags>
+        <tag>Poem life</tag>
       </tags>
   </entry>
 </search>
