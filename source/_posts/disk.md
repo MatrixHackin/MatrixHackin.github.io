@@ -28,14 +28,14 @@ GUID 用于确保每个分区的唯一标识
 
 以我的电脑为例
 - 磁盘管理界面
-	![disk management view](https://a1.boltp.com/2025/03/17/67d8070b46160.png)
+	![disk management view](/images/boltp/a1/2025/03/17/67d8070b46160.webp)
 - diskpart界面
-	![diskpart view](https://a1.boltp.com/2025/03/17/67d807c5062cc.png)
-	![diskpart view new](https://a1.boltp.com/2025/03/17/67d807fe71729.png)
+	![diskpart view](/images/boltp/a1/2025/03/17/67d807c5062cc.webp)
+	![diskpart view new](/images/boltp/a1/2025/03/17/67d807fe71729.webp)
 - linux
-	![linux disk](https://a1.boltp.com/2025/03/17/67d808e3e7c0c.png)
-	![linux2.png](https://a1.boltp.com/2025/03/17/67d8093ee8f61.png)
-	![linux3.png](https://a1.boltp.com/2025/03/17/67d8095b23504.png)
+	![linux disk](/images/boltp/a1/2025/03/17/67d808e3e7c0c.webp)
+	![linux2.png](/images/boltp/a1/2025/03/17/67d8093ee8f61.webp)
+	![linux3.png](/images/boltp/a1/2025/03/17/67d8095b23504.webp)
 - 此处磁盘1应该是电脑自带的512G SSD
 	- 分区1就是ESP
 	- 分区2是Windows系统的保留分区
