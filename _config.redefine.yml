@@ -205,7 +205,9 @@ navbar:
       submenus:
     #    Me: /about
     #    Github: https://github.com/EvanNotFound/hexo-theme-redefine
-        Blog: https://dylanliublog.com
+        Blog: /
+        dylanliublog.com: https://dylanliublog.com
+        GitHub Pages: https://matrixhackin.github.io
     #     Friends: /friends
     # Links: 
     #   icon: fa-regular fa-link

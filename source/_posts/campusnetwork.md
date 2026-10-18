@@ -1,6 +1,7 @@
 ---
 title: My MacBook can’t access the Internet via Campus Network!
 date: 2024-08-16 13:25:35
+updated: 2025-04-05 08:08:53
 tags: Computer Network
 categories: Technology
 ---

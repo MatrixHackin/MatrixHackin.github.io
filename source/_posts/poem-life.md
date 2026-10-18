@@ -1,6 +1,7 @@
 ---
 title: 生命
 date: 2024-08-14 13:25:35
+updated: 2025-03-17 19:21:31
 tags: Poem life
 categories: Self-talking
 ---

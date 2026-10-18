@@ -17,7 +17,7 @@ The **published site** lives on `main` (GitHub Pages serves the root of `main` f
 git clone -b hexo https://github.com/MatrixHackin/MatrixHackin.github.io.git blog-source
 cd blog-source
 npm install
-hexo server   # local preview
+npx hexo server   # local preview
 ```
 
 ## Publish to `main`
@@ -32,7 +32,7 @@ deploy:
 ```
 
 ```bash
-hexo clean && hexo generate && hexo deploy
+npx hexo clean && npx hexo generate && npx hexo deploy
 ```
 
 That updates **only** `main` with the built site. Keep `node_modules/`, `public/`, and `.deploy_git/` out of git (see `.gitignore`).
@@ -40,4 +40,9 @@ That updates **only** `main` with the built site. Keep `node_modules/`, `public/
 ## Notes
 
 - Theme: `hexo-theme-redefine` (npm dependency; `themes/` is empty by design).
-- Fix `url` in `_config.yml` before the next public deploy (currently a placeholder).
+- Canonical URL is `https://dylanliublog.com`. Timezone is `Asia/Shanghai`.
+- The published site is also meant to load at `https://matrixhackin.github.io`. Assets and in-site links are root-relative; HTML includes an alternate URL and upgrades HTTP to HTTPS on both hosts.
+- GitHub Pages still 301s `*.github.io` to the custom domain **while** `CNAME` is set. Enable **Settings → Pages → Enforce HTTPS** so that redirect is `https://dylanliublog.com` instead of `http://`.
+- Post `date` / `updated` front-matter is pinned to the live GitHub Pages timestamps so article pages stay stable across rebuilds.
+- `scripts/stable-output.js` emits `.nojekyll` and sorts search/tag output so `hexo generate` is repeatable.
+- Post photos originally live on 闪电图床 (`a1.boltp.com` / `a2.boltp.com`). Those hosts serve uncompressed originals (often 1–8&nbsp;MB) and Cloudflare cache misses from the origin are slow. Keep the original URLs in Markdown; the build rewrites them to local WebP under `source/images/boltp/` (~12&nbsp;MiB total), eager-loads the first article photo, and starts lazy-loading ~800px before images enter the viewport. Re-mirror after adding photos: `npm run mirror-images` (`tools/mirror_boltp.py` — keep this helper out of `scripts/`, Hexo loads every file there as JavaScript).

@@ -7,12 +7,14 @@ title: DylanLiu's Blog
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: HEMU LIU
 language: en
-timezone: ''
+timezone: Asia/Shanghai
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+## Canonical public URL (custom domain). The same GitHub Pages files are also
+## reachable at https://matrixhackin.github.io (GitHub may redirect that host
+## to the custom domain while a CNAME is configured).
 url: https://dylanliublog.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -80,7 +82,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: 'date'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -90,6 +92,7 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
+  - .nojekyll
 exclude:
 ignore:
 

@@ -1,6 +1,7 @@
 ---
 title: First foreign experience Sydney
 date: 2024-02-23 19:35:40
+updated: 2025-05-02 17:19:57
 tags: SCA, Australia, Sydney
 categories: Travel
 ---
