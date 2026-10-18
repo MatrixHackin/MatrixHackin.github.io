@@ -1,22 +1,32 @@
 export default function initLazyLoad() {
-  const imgs = document.querySelectorAll("img");
-  const options = {
-    rootMargin: "0px",
-    threshold: 0.1,
+  const imgs = document.querySelectorAll("img[lazyload][data-src], img[data-src]");
+
+  const load = (img) => {
+    const src = img.getAttribute("data-src");
+    if (!src) return;
+    img.src = src;
+    img.removeAttribute("data-src");
+    img.removeAttribute("lazyload");
   };
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.getAttribute("data-src");
-        img.removeAttribute("lazyload");
-        observer.unobserve(img);
-      }
-    });
-  }, options);
-  imgs.forEach((img) => {
-    if (img.hasAttribute("lazyload")) {
-      observer.observe(img);
-    }
-  });
+
+  if (!("IntersectionObserver" in window)) {
+    imgs.forEach(load);
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        load(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      rootMargin: "800px 0px",
+      threshold: 0,
+    },
+  );
+
+  imgs.forEach((img) => observer.observe(img));
 }
