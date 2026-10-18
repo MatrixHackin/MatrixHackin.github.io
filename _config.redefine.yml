@@ -12,6 +12,8 @@
 info:
   # Site title
   title: DylanLiu's blog
+  # Site subtitle (homepage document title)
+  subtitle: HEMU LIU
   # Author name
   author: HEMU LIU
   # Site URL
@@ -57,6 +59,11 @@ global:
       enable: false # Whether to enable custom english fonts
       family:  # Font family
       url:  # Font URL to CSS file
+    # Custom title fonts (navbar, sidebar)
+    title:
+      enable: false # Whether to enable custom title fonts
+      family:  # Font family
+      url:  # Font URL to CSS file
   # Content max width
   content_max_width: 1000px
   # Sidebar width
@@ -79,9 +86,20 @@ global:
   # Whether to enable single page experience (using swup). See https://swup.js.org/. similar to pjax
   single_page: true
   # Whether to enable Preloader.
-  preloader: true
+  preloader:
+    enable: true
+    custom_message: # Custom message. If empty, the site title will be displayed
+  # Side tools settings
+  side_tools:
+    # Whether to enable gear rotation animation for settings button
+    gear_rotation: true
+    # Whether to auto expand tools list on page load
+    auto_expand: false
   # Whether to enable open graph
-  open_graph: false
+  open_graph:
+    enable: false
+    image: /images/image.webp
+    description:
   # Google Analytics
   google_analytics:
     enable: false # Whether to enable Google Analytics
@@ -121,6 +139,7 @@ home_banner:
     text: ["Bring forward what is true","Write it so that it is clear", "Defend it to your last breath"] # subtitle text, array
     hitokoto:  # 一言配置
       enable: false # Whether to enable hitokoto
+      show_author: false # Whether to show author
       api: https://v1.hitokoto.cn # API URL, can add types, see https://developer.hitokoto.cn/sentence/#%E5%8F%A5%E5%AD%90%E7%B1%BB%E5%9E%8B-%E5%8F%82%E6%95%B0
     typing_speed: 100 # Typing speed (ms)
     backing_speed: 80 # Backing speed (ms)
@@ -154,19 +173,24 @@ home_banner:
     enable: true
     # Social links style
     style: default # default, reverse, center
-    # Social links
+    # Social links (array format required in 2.9 for stable order)
     links:
-      github: https://github.com/MatrixHackin # your GitHub URL
-      instagram: https://www.instagram.com/averyliu888
-      facebook: https://www.facebook.com/share/19b1whfQhx/?mibextid=wwXIfr
-      whatsapp: https://wa.me/85246197890 # your WhatsApp URL
-      email: matrixhackin@outlook.com # your email
-      qq: https://qm.qq.com/q/UPAsAtzCgi
-      # ...... # you can add more
+      - icon: github
+        url: https://github.com/MatrixHackin
+      - icon: instagram
+        url: https://www.instagram.com/averyliu888
+      - icon: facebook
+        url: https://www.facebook.com/share/19b1whfQhx/?mibextid=wwXIfr
+      - icon: whatsapp
+        url: https://wa.me/85246197890
+      - icon: email
+        url: matrixhackin@outlook.com
+      - icon: qq
+        url: https://qm.qq.com/q/UPAsAtzCgi
     # Social links with QRcode drawers
     qrs:
-      weixin: /images/wechat.jpg  # your Wechat QRcode image URL
-      # ...... # you can add more
+      - icon: weixin
+        qr: /images/wechat.jpg
 # HOME BANNER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -245,6 +269,8 @@ home:
       # ...... # you can add more
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
+  # Article excerpt length
+  excerpt_length: 200 # Max length of article excerpt
   # Article categories visibility
   categories:
     enable: true  # Whether to enable
@@ -267,6 +293,7 @@ articles:
     image_alignment: center # image alignment. left, center
     image_caption: true # Whether to display image caption
     link_icon: true # Whether to display link icon
+    delete_mask: false # Add mask effect to <del> tags, hiding content by default and revealing on hover
     title_alignment: left # Title alignment. left, center
     headings_top_spacing: # Top spacing for headings from h1-h6
       h1: 3.2rem
@@ -289,6 +316,9 @@ articles:
   code_block:
     copy: true # Whether to enable code block copy button
     style: mac # mac | simple
+    highlight_theme: # Color scheme for highlightjs code highlighting
+      light: github # light mode theme
+      dark: vs2015 # dark mode theme
     font: # Custom font
       enable: false # Whether to enable
       family: # Font family
@@ -306,6 +336,8 @@ articles:
     default: cc_by_nc_sa # Default license, can be cc_by_nc_sa, cc_by_nd, cc_by_nc, cc_by_sa, cc_by, all_rights_reserved, public_domain
   # Whether to enable lazyload for images
   lazyload: true
+  # Pangu.js (automatically add space between Chinese and English). See https://github.com/vinta/pangu.js
+  pangu_js: false
   # Article recommendation. Requires nodejieba (npm install nodejieba). Transplanted from hexo-theme-volantis.
   recommendation:
     # Whether to enable article recommendation
@@ -365,6 +397,18 @@ comment:
       lang: en # Giscus language. e.g. en, zh-CN, zh-TW
       input_position: bottom # Place the comment box above/below the comments. e.g. top, bottom
       loading: lazy # Load the comments lazily
+    # Artalk comment system. See https://artalk.js.org/
+    artalk:
+      server: # Artalk server URL. e.g. https://artalk.example.com
+      site: # Site name shown in Artalk admin (should match server-side site config)
+    # Utterances comment system. See https://utteranc.es/
+    utterances:
+      repo: # GitHub repository name e.g. owner/repo (Issues must be enabled)
+      issue_term: pathname # pathname, url, title, og:title (recommended: pathname for single-page mode)
+      issue_number: # Use a specific issue number instead of issue_term
+      label: # Optional label for created issues
+      theme_light: github-light # Light theme
+      theme_dark: github-dark # Dark theme
 # COMMENT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -430,7 +474,10 @@ plugins:
   # Mermaid JS. Requires hexo-filter-mermaid-diagrams (npm i hexo-filter-mermaid-diagrams). See https://mermaid.js.org/
   mermaid:
     enable: false # enable mermaid or not
-    version: "9.3.0" # default v9.3.0
+    version: "11.4.1" # default v11.4.1
+    theme:
+      light: "default"
+      dark: "dark"
 # PLUGINS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -441,6 +488,10 @@ page_templates:
   friends_column: 2
   # Tags page style
   tags_style: blur # blur, cloud
+  # Masonry page batch size
+  masonry:
+    batch_size: 12
+    initial_batch_size: 24
 # PAGE TEMPLATES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
