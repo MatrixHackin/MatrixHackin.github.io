@@ -1,5 +1,6 @@
 ---
 title: Hello World
+date: 2024-08-12 00:00:00
 sticky: 999
 ---
 Hi, there! Welcome to Dylan Liu's Blog.
