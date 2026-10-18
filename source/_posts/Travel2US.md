@@ -3,7 +3,7 @@ title: Travel to United States!
 date: 2024-11-20 22:25:20
 updated: 2025-05-02 15:33:05
 tags: SC, America, Atlanta
-categories: Trvel
+categories: Travel
 ---
 
 Taking the opportunity of participating in SC24, we traveled to this mysterious country on the other side of the earth and experienced the completely different lifestyle, culture and customs.

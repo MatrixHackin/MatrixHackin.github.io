@@ -1,8 +1,8 @@
 ---
-title: Studying at the best Universitie in Singapore-NUS
+title: Studying at the best University in Singapore-NUS
 date: 2024-08-02 12:45:59
 updated: 2025-05-03 18:27:43
-tags: Singarpore, NUS, Kubernetes
+tags: Singapore, NUS, Kubernetes
 categories: Study
 ---
 I am very honored to have passed the selection process and joined NUS this summer to learn about cloud computing from Professor Richard TB Ma.

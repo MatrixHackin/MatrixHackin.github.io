@@ -2,7 +2,7 @@
 title: What is in the Disk Storage
 date: 2023-08-15 13:25:35
 updated: 2025-05-02 15:45:46
-tags: Disk Storage, Computer Orgnization
+tags: Disk Storage, Computer Organization
 categories: Technology
 ---
 
