@@ -17,7 +17,7 @@ The **published site** lives on `main` (GitHub Pages serves the root of `main` f
 git clone -b hexo https://github.com/MatrixHackin/MatrixHackin.github.io.git blog-source
 cd blog-source
 npm install
-hexo server   # local preview
+npx hexo server   # local preview
 ```
 
 ## Publish to `main`
@@ -32,7 +32,7 @@ deploy:
 ```
 
 ```bash
-hexo clean && hexo generate && hexo deploy
+npx hexo clean && npx hexo generate && npx hexo deploy
 ```
 
 That updates **only** `main` with the built site. Keep `node_modules/`, `public/`, and `.deploy_git/` out of git (see `.gitignore`).
@@ -40,4 +40,6 @@ That updates **only** `main` with the built site. Keep `node_modules/`, `public/
 ## Notes
 
 - Theme: `hexo-theme-redefine` (npm dependency; `themes/` is empty by design).
-- Fix `url` in `_config.yml` before the next public deploy (currently a placeholder).
+- Site URL is `https://dylanliublog.com`. Timezone is `Asia/Shanghai`.
+- Post `date` / `updated` front-matter is pinned to the live GitHub Pages timestamps so article pages stay stable across rebuilds.
+- `scripts/stable-output.js` emits `.nojekyll` and sorts search/tag output so `hexo generate` is repeatable.

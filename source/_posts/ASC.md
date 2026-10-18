@@ -1,6 +1,7 @@
 ---
 title: One of the best HPC Competition around the world-ASC24
 date: 2024-04-20 12:45:59
+updated: 2025-05-02 20:10:52
 tags: ASC, China, Shanghai
 categories: Conference
 ---

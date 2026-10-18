@@ -1,6 +1,7 @@
 ---
 title: Attending a national conference SCA24
 date: 2024-02-24 16:45:45
+updated: 2025-05-03 17:54:50
 tags: SCA, Australia, Sydney
 categories: Conference
 ---

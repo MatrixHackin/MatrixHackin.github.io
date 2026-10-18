@@ -1,6 +1,7 @@
 ---
 title: The Best SC24!
 date: 2024-11-18 20:25:35
+updated: 2025-05-02 15:40:48
 tags: SC, America, Atlanta
 categories: Conference
 ---
