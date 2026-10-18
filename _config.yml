@@ -12,7 +12,9 @@ language: en
 timezone: Asia/Shanghai
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+## Canonical public URL (custom domain). The same GitHub Pages files are also
+## reachable at https://matrixhackin.github.io (GitHub may redirect that host
+## to the custom domain while a CNAME is configured).
 url: https://dylanliublog.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
